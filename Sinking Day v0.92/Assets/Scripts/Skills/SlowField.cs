@@ -19,7 +19,7 @@ public class SlowField : MonoBehaviour {
         {
             for (int i = 0; i < enemyList.Count; i++)
             {
-                enemyList[i].GetComponent<Enemy>().SlowDown(slowRate);
+                //enemyList[i].GetComponent<Enemy>().SlowDown(slowRate);
             }
         }
 	}

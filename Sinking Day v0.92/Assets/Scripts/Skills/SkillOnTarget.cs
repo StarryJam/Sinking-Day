@@ -26,12 +26,12 @@ public abstract class SkillOnTarget : Skill {
         GameObject hitObject = PointerEvent.hit.collider.gameObject;
         if ((toEnemy && PointerEvent.hit.collider.gameObject.tag == "Enemy") || (!toEnemy && PointerEvent.hit.collider.gameObject.tag == "Turret")) 
         {
-            if (hitObject.GetComponent<SubObject>() != null)
-            {
-                target = hitObject.GetComponent<SubObject>().FindFather();
-            }
-            else
-                target = PointerEvent.hit.collider.gameObject;
+            //if (hitObject.GetComponent<SubObject>() != null)
+            //{
+            //    target = hitObject.GetComponent<SubObject>().FindFather();
+            //}
+            //else
+            //    target = PointerEvent.hit.collider.gameObject;
         }
     }
 }

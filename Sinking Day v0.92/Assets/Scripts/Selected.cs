@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface Selected{
+public interface Selectee{
     void BeSelected();
     void DeSelected();
 }

@@ -17,6 +17,8 @@ public class PointerEvent : MonoBehaviour {
     public static bool isOnUI = false;
     public static bool isOnUnit = false;
     public static bool canSelecte = false;
+    public static bool isOnEnemy = false;
+    public static bool isOnFriend = false;
 
     public static GameObject pointerOnObj;
 
@@ -61,36 +63,74 @@ public class PointerEvent : MonoBehaviour {
 
             //判断是否在单位上
             if (pointerOnObj.GetComponent<Unit>() != null)
+            {
                 isOnUnit = true;
+                if (pointerOnObj.GetComponent<Unit>().camp == Unit.Camp.enemy)
+                {
+                    isOnEnemy = true;
+                }
+            }
             else
                 isOnUnit = false;
 
             //判断能否选择
-            if (pointerOnObj.GetComponent<Selected>() != null)
+            if (pointerOnObj.GetComponent<Selectee>() != null)
                 canSelecte = true;
             else
                 canSelecte = false;
         }
+        else
+        {
+            pointerOnObj = null;
+        }
     }
 
-    public void DeSelect()
+    public void Select()
     {
-        StartCoroutine(DeSelectAtTheEndOfFrame());
+        if (pointerOnObj != null)
+        {
+            if(pointerOnObj.GetComponent<Selectee>() != null)
+            {
+                if (selected == null)
+                {
+                    pointerOnObj.GetComponent<Selectee>().BeSelected();
+                }
+                else
+                {
+                    //点击不相同目标的时候重新选择
+                    if (selected != pointerOnObj)
+                    {
+                        selected.GetComponent<Selectee>().DeSelected();
+                        Select();
+                    }
+                }
+            }
+        }
+    }
+    
+
+    public void Cancel()
+    {
+        if (selected.GetComponent<UnitOfPlyer>() != null)
+        {
+            selected.GetComponent<UnitOfPlyer>().Cancel();
+        }
+        else
+            selected.GetComponent<Selectee>().DeSelected();
+        //StartCoroutine(DeSelectAtTheEndOfFrame());
     }
 
     private IEnumerator DeSelectAtTheEndOfFrame()
     {
         yield return new WaitForEndOfFrame();
-        selected.GetComponent<Selected>().DeSelected();
+        selected.GetComponent<Selectee>().DeSelected();
         selected = null;
     }
 
 
-
-    // Update is called once per frame
+    
     void Update () {
         PointerOnWhat();
-        //Debug.Log(pointerOnObj);
 
         if (Input.GetMouseButtonUp(0))//鼠标左键松开
         {
@@ -102,40 +142,16 @@ public class PointerEvent : MonoBehaviour {
                 }
                 else
                 {
-                    if (pointerOnObj != selected && (hit.collider.GetComponent<SubObject>() == null || hit.collider.GetComponent<SubObject>().FindFather() != selected)) //判断是否点击当前选择对象或其父对象
-                    {
-                        if (canSelecte)
-                        {
-                            //取消当前选择
-                            if (selected != null)
-                            {
-                                DeSelect();
-                            }
-                            //选中点击物体
-                            selected = hit.collider.gameObject;
-                            selected.GetComponent<Selected>().BeSelected();
-                        }
-                    }
+                    Select();
                 }
             }
         }
-        else if (Input.GetMouseButtonUp(1))//鼠标右键点击
+        else if (Input.GetMouseButtonUp(1))//鼠标右键松开
         {
             if (selected != null)
             {
                 //若玩家正在操作单位则不取消选择
-                if (selected.GetComponent<UnitOfPlyer>() != null && selected.GetComponent<UnitOfPlyer>().state != Unit.UnitState.holding)
-                {
-                    Debug.Log("yep");
-                }
-                else
-                {
-                    if(selected.GetComponent<UnitOfPlyer>() != null)
-                    {
-                        Debug.Log(selected.GetComponent<UnitOfPlyer>().state);
-                    }
-                    DeSelect();
-                }
+                    Cancel();
             }
             if (isCasting)
             {

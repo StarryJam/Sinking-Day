@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitOfPlyer : Unit {
-
+public class UnitOfPlyer : Unit,Selectee {
     
 
 	// Use this for initialization
 	new void Start () {
         base.Start();
         camp = Camp.friend;
+        Test();
 	}
 	
     
@@ -27,19 +27,6 @@ public class UnitOfPlyer : Unit {
     }
     
 
-    new public void ChangingState(UnitState _state)
-    {
-        base.ChangingState(_state);
-        if (state == UnitState.readyToAttack)
-        {
-            CheakingRange(attackRange);
-        }
-        else
-        {
-            UIManager.HideUI(rangeCursorUI);
-        }
-    }
-
     public void ReadyToMove()
     {
         ChangingState(UnitState.readyToMove);
@@ -48,46 +35,81 @@ public class UnitOfPlyer : Unit {
     public void ReadyToAttack()
     {
         ChangingState(UnitState.readyToAttack);
+        CheakingRange(attackRange);
     }
 
+    public void CancelAction()
+    {
+        if (state == UnitState.readyToMove)
+        {
+            map.ClearPath();
+        }
+        else if (state == UnitState.readyToAttack)
+        {
+            UIManager.HideUI(rangeCursorUI);
+        }
+        ChangingState(UnitState.holding);
+    }
 
+    private void DoAction()
+    {
+        if (state == UnitState.readyToMove && PointerEvent.isOnMap)
+        {
+            Move();
+            map.ClearPath();
+        }
+        else if (state == UnitState.readyToAttack && PointerEvent.isOnEnemy) 
+        {
+            Attack(PointerEvent.pointerOnObj.GetComponent<Unit>());
+            UIManager.HideUI(rangeCursorUI);
+        }
+        ChangingState(UnitState.holding);
+    }
 
     public void ControlAndAct()
     {
         //UI
 
 
-
-
-        if (state == UnitState.readyToMove)
+        if (PointerEvent.selected == gameObject)//仅在被选中时可以控制
         {
-            if (!PointerEvent.isOnUI)//判断鼠标是否点击在UI上
+            if (state == UnitState.readyToMove)
             {
-                ChoosingPath();
-                if (Input.GetMouseButtonUp(0) && !isMoving)
+                PlayerChoosingPath();
+                map.DisplayPath();
+            }
+            else
+            {
+                map.UndisplayPath();
+            }
+            if (!PointerEvent.isOnUI)//判断鼠标是否在UI上
+            {
+                if (Input.GetMouseButtonUp(0))
                 {
-                    Move();
+                    DoAction();
                 }
                 if (Input.GetMouseButtonUp(1))
                 {
-                    ChangingState(UnitState.holding);
+                    CancelAction();
                 }
             }
         }
-        else if (state == UnitState.readyToAttack)
-        {
-            if (Input.GetMouseButtonDown(0) && PointerEvent.isOnUnit)
-            {
-                Attack(PointerEvent.pointerOnObj.GetComponent<Unit>());
-            }
-            if (Input.GetMouseButtonDown(1))
-            {
-                ChangingState(UnitState.holding);
-            }
-        }
-
     }
 
+    private void PlayerChoosingPath()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        bool isCollider = Physics.Raycast(ray, out hit, 1000);
+
+        if (isCollider)
+        {
+            if (hit.collider.gameObject.GetComponent<Map_BaseCube>() != null) //判断是否在地图上
+            {
+                ChoosePath(hit.collider.gameObject.GetComponent<Map_BaseCube>());
+            }
+        }
+    }
 
     public void CheakingRange(int range)
     {
@@ -95,5 +117,20 @@ public class UnitOfPlyer : Unit {
         rangeCursorUI.transform.localScale = new Vector3(rangeValue, rangeValue, rangeValue);
         UIManager.DisplayUI(rangeCursorUI);
     }
-    
+
+    public void Cancel()
+    {
+        Debug.Log("asda");
+        if (state == UnitState.readyToAttack || state == UnitState.readyToMove)
+        {
+            CancelAction();
+        }
+        else
+            DeSelected();
+    }
+
+    public void MouseHit()
+    {
+
+    }
 }

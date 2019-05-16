@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using cakeslice;
 
-public class Unit : MonoBehaviour,Selected  {
+public class Unit : MonoBehaviour,Selectee  {
 
-    public GameObject map;
+    public Grid map;
     public float maxHealth = 100;
     public float currentHealth;
     public int attackRange = 5;
@@ -39,7 +39,7 @@ public class Unit : MonoBehaviour,Selected  {
         UIManager.HideUI(rangeCursorUI);
         
 
-        map = Grid.map.gameObject;
+        map = Grid.map;
         currentHealth = maxHealth;
         state = UnitState.holding;
     }
@@ -63,7 +63,6 @@ public class Unit : MonoBehaviour,Selected  {
         if (_state == UnitState.holding)
         {
             PointerEvent.ChangingPointerState(PointerEvent.pointerState.normal);
-            map.GetComponent<Grid>().path.Clear();
         }
         if (_state == UnitState.readyToAttack)
         {
@@ -87,7 +86,6 @@ public class Unit : MonoBehaviour,Selected  {
         for (int i = 0; i < transform.childCount; i++)
         {
             Destroy(transform.GetChild(i).gameObject.GetComponent<Outline>());
-            map.GetComponent<Grid>().path.Clear();
         }
     }
 
@@ -97,28 +95,34 @@ public class Unit : MonoBehaviour,Selected  {
         
     }
 
-    public void ChoosingPath()
+    //public void ChoosingPath()
+    //{
+    //        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+    //        bool isCollider = Physics.Raycast(ray, out hit, 1000);
+
+    //        if (isCollider)
+    //        {
+    //            if (hit.collider.gameObject.GetComponent<Map_BaseCube>() != null) //判断是否在地图上
+    //            {
+    //                map.FindPath(transform.position, hit.collider.transform.position);
+                    
+    //            }
+    //        }
+    //}
+
+    public void ChoosePath(Map_BaseCube destination)
     {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            bool isCollider = Physics.Raycast(ray, out hit, 1000);
-
-            if (isCollider)
-            {
-                if (hit.collider.gameObject.GetComponent<Map_BaseCube>() != null) //判断是否在地图上
-                {
-                    map.GetComponent<Grid>().FindPath(transform.position, hit.collider.transform.position);
-                }
-            }
+        map.FindPath(transform.position, hit.collider.transform.position);
     }
 
-    
+
 
     public void Move()
     {
-        StartCoroutine(MovePath(map.GetComponent<Grid>().path));
+        StartCoroutine(MovePath(map.path));
         state = UnitState.holding;
-        map.GetComponent<Grid>().path.Clear();
+        map.path.Clear();
     }
 
     IEnumerator MovePath(List<Node> _path)

@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{BFC8CDE4-3D88-D89A-5169-7820F0DE8B51}</ProjectGuid>
+    <ProjectGuid>{9E4DEC48-D4ED-9E0F-3EBB-1F57CB75B39D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -147,16 +147,16 @@
     <Compile Include="Assets\Import Assets\QFramework\Framework\7.Tests\Editor\Issues.cs" />
     <Compile Include="Assets\Import Assets\UnityEffects\Assets\Script\Editor\CharactarShaderGUI.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.91/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.92/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.91/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.92/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.91/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.92/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.91/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.92/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>H:/Unity2018.2.0/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -399,16 +399,16 @@
       <HintPath>H:/Unity2018.2.0/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="QFramework.Log">
-      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.91/Assets/Import Assets/QFramework/Framework/0.Libs/Plugins/QFramework.Log.dll</HintPath>
+      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.92/Assets/Import Assets/QFramework/Framework/0.Libs/Plugins/QFramework.Log.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.91/Assets/Import Assets/QFramework/Framework/2.ResKit/4.IO/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.92/Assets/Import Assets/QFramework/Framework/2.ResKit/4.IO/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.91/Assets/Import Assets/QFramework/Framework/2.ResKit/4.IO/Plugins/Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.92/Assets/Import Assets/QFramework/Framework/2.ResKit/4.IO/Plugins/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="ProtobufNet">
-      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.91/Assets/Import Assets/QFramework/Framework/2.ResKit/4.IO/Plugins/ProtobufNet.dll</HintPath>
+      <HintPath>D:/Work/Unity3D/Sinking-Day/Sinking Day v0.92/Assets/Import Assets/QFramework/Framework/2.ResKit/4.IO/Plugins/ProtobufNet.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/StarryJam/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -458,7 +458,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{2FFEF88F-B657-8EEF-F457-8BB5322172ED}</Project>
+      <Project>{20D33564-A635-CB99-EC12-B23B94EB2B99}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>

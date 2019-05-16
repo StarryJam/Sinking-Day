@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour {
 
+    private bool isShowPath = false;
+
     public static Grid map;
 
     private Node[,] gridNodes;
@@ -78,10 +80,13 @@ public class Grid : MonoBehaviour {
             }
             else
             {
-                if (path.Contains(node))
+                if (path.Contains(node) && isShowPath)
                 {
                     node.state = Node.NodeState.inPath;
-                    node.mapCube.cube.GetComponent<MeshRenderer>().material = node.mapCube.marterial_InPath;
+                    if (isShowPath)
+                        node.mapCube.cube.GetComponent<MeshRenderer>().material = node.mapCube.marterial_InPath;
+                    else
+                        node.mapCube.cube.GetComponent<MeshRenderer>().material = node.mapCube.marterial_Normal;
                 }
                 else
                 {
@@ -92,7 +97,7 @@ public class Grid : MonoBehaviour {
 
         }
     }
-    
+
     public void FindPath(Vector3 startPoint, Vector3 endPoint) //寻路算法
     {
         Node startNode = GetNodeFromPosition(startPoint);
@@ -131,7 +136,7 @@ public class Grid : MonoBehaviour {
                 {
                     node.gCost = newCost;
                     node.hCost = GetNodedsDistance(node, endNode);
-                    node.parent = currentNode;
+                    node.parentNode = currentNode;
                     if (!openSet.Contains(node))
                     {
                         openSet.Add(node);
@@ -141,19 +146,35 @@ public class Grid : MonoBehaviour {
         }
     }
 
-    public void GeneratePath(Node startNode, Node endNode)
+    public void DisplayPath()
+    {
+        isShowPath = true;
+    }
+
+    public void UndisplayPath()
+    {
+        isShowPath = false;
+    }
+
+    public void ClearPath()
+    {
+        isShowPath = false;
+        path.Clear();
+    }
+
+    private void GeneratePath(Node startNode, Node endNode)
     {
         path = new List<Node>();
         Node temp = endNode;
         while (temp != startNode)
         {
             path.Add(temp);
-            temp = temp.parent;
+            temp = temp.parentNode;
         }
         path.Reverse();
     }
 
-    int GetNodedsDistance(Node a, Node b)
+    private int GetNodedsDistance(Node a, Node b)
     {
         int cntX = Mathf.Abs(a._girdX - b._girdX);
         int cntY = Mathf.Abs(a._girdY - b._girdY);
@@ -163,7 +184,7 @@ public class Grid : MonoBehaviour {
             return 14 * cntX + 10 * (cntY - cntX);
     }
 
-    public Node GetNodeFromPosition(Vector3 position)
+    private Node GetNodeFromPosition(Vector3 position)
     {
         Vector3 playerPosition = position - transform.position;
         float percentX = (playerPosition.x + gridSize.x / 2) / gridSize.x;
@@ -177,7 +198,7 @@ public class Grid : MonoBehaviour {
         return gridNodes[x, y];
     }
 
-    public List<Node> GetNeiborNodes(Node node)
+    private List<Node> GetNeiborNodes(Node node)
     {
         List<Node> neiberNodes = new List<Node>();
         for(int i = -1; i <= 1; i++)

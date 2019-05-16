@@ -11,7 +11,7 @@ public class Node{
 
     public int gCost, hCost;
 
-    public Node parent;
+    public Node parentNode;
 
     public enum NodeState
     {
