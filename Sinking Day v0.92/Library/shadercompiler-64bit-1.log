@@ -1,0 +1,55 @@
+Base path: H:/Unity3D/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-13700
+Cmd: getPlatforms
+Cmd: preprocess
+  insize=1877 outsize=615 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (39): undeclared identifier 'UnityObjectToClipPos'\nCompiling Vertex program
+  api=4 type=0 insize=1561 outsize=0 kw= ok=0
+Cmd: preprocess
+  error: 1 plat 15 at (50): Unrecognized #pragma surface directive: //keepalpha
+  error: 1 plat 15 at (50): Unrecognized #pragma surface directive: noshadowmask
+  insize=2691 outsize=2957 ok=1
+Cmd: preprocess
+  insize=1188 outsize=563 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (41): undeclared identifier 'UnityObjectToClipPos'\nCompiling Vertex program
+  api=4 type=0 insize=924 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=7592 outsize=1887 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (64): undeclared identifier 'UnityObjectToClipPos'\nCompiling Vertex program
+  api=4 type=0 insize=1944 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=2909 outsize=484 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (52): undeclared identifier 'UnityObjectToClipPos'\nCompiling Vertex program
+  api=4 type=0 insize=2725 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=1310 outsize=1307 ok=1
+Cmd: preprocess
+  insize=863 outsize=318 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (42): undeclared identifier 'UnityObjectToClipPos'\nCompiling Vertex program
+  api=4 type=0 insize=843 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=985 outsize=479 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (41): undeclared identifier 'UnityObjectToClipPos'\nCompiling Vertex program
+  api=4 type=0 insize=805 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=2262 outsize=698 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (42): undeclared identifier 'UnityObjectToClipPos'\nCompiling Vertex program
+  api=4 type=0 insize=1862 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=4359 outsize=1485 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (84): undeclared identifier 'UnityObjectToClipPos'\nCompiling Vertex program with _FRESNEL_OFF _FLOWOVERLAY_OFF
+  api=4 type=0 insize=3175 outsize=0 kw=_FRESNEL_OFF _FLOWOVERLAY_OFF ok=0
+Unhandled exception: Readfile from pipe failed. GLE=管道已结束。
+
+
+Quitting shader compiler process
+
+Crashed!

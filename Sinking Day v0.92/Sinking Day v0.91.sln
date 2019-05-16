@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sinking Day v0.91", "Assembly-CSharp.csproj", "{2FFEF88F-B657-8EEF-F457-8BB5322172ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sinking Day v0.91", "Assembly-CSharp-Editor.csproj", "{BFC8CDE4-3D88-D89A-5169-7820F0DE8B51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FFEF88F-B657-8EEF-F457-8BB5322172ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FFEF88F-B657-8EEF-F457-8BB5322172ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FFEF88F-B657-8EEF-F457-8BB5322172ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FFEF88F-B657-8EEF-F457-8BB5322172ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC8CDE4-3D88-D89A-5169-7820F0DE8B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC8CDE4-3D88-D89A-5169-7820F0DE8B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC8CDE4-3D88-D89A-5169-7820F0DE8B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC8CDE4-3D88-D89A-5169-7820F0DE8B51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
