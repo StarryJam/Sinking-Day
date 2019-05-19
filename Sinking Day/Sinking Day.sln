@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sinking Day", "Assembly-CSharp.csproj", "{0A58257D-8DB9-2497-F8CA-BD90D748AF9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sinking Day", "Assembly-CSharp-Editor.csproj", "{1F1B3344-337D-AA5B-903B-4AF0A770F84F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A58257D-8DB9-2497-F8CA-BD90D748AF9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A58257D-8DB9-2497-F8CA-BD90D748AF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A58257D-8DB9-2497-F8CA-BD90D748AF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A58257D-8DB9-2497-F8CA-BD90D748AF9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F1B3344-337D-AA5B-903B-4AF0A770F84F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F1B3344-337D-AA5B-903B-4AF0A770F84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F1B3344-337D-AA5B-903B-4AF0A770F84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F1B3344-337D-AA5B-903B-4AF0A770F84F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
