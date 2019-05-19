@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitOfPlyer : Unit,Selectee {
-    
+public class UnitOfPlyer : Unit, Selectee {
 
-	// Use this for initialization
-	new void Start () {
+
+    // Use this for initialization
+    new void Start() {
         base.Start();
-	}
-	
-    
+    }
 
-	new void LateUpdate () {
+
+
+    new void LateUpdate() {
         base.LateUpdate();
         if (StageManager.turnStage == StageManager.TurnStage.playMoveing)
         {
@@ -23,37 +23,40 @@ public class UnitOfPlyer : Unit,Selectee {
             RemainHolding();
         }
     }
-    
+
 
     public void ReadyToMove()
     {
-        PointerEvent._pointerState = PointerEvent.PointerState.choosingTarget;
-        ChangingState(UnitState.readyToMove);
+        PointerEvent.ChangingPointerState(PointerEvent.PointerState.normal);
+        ChangeState(UnitState.readyToMove);
     }
 
     public void ReadyToAttack()
     {
-        PointerEvent._pointerState = PointerEvent.PointerState.choosingTarget;
-        ChangingState(UnitState.readyToAttack);
-        CheakingRange(attackRange);
+        PointerEvent.ChangingPointerState(PointerEvent.PointerState.choosingTarget);
+        ChangeState(UnitState.readyToAttack);
+        CheakRange(attackRange);
+    }
+
+    public void ReadyToSpell(Skill skill)
+    {
+        currentSkill = skill;
+        PointerEvent.ChangingPointerState(PointerEvent.PointerState.choosingTarget);
+        ChangeState(UnitState.readyToSpell);
+        CheakRange(skill.spellRange);
     }
 
     public void RemainHolding()
     {
-        ChangingState(UnitState.holding);
-        PointerEvent._pointerState = PointerEvent.PointerState.normal;
+        ChangeState(UnitState.holding);
+        currentSkill = null;
+        map.ClearPath();
+        UIManager.HideUI(rangeCursorUI);
+        PointerEvent.ChangingPointerState(PointerEvent.PointerState.normal);
     }
 
     public void CancelAction()
     {
-        if (state == UnitState.readyToMove)
-        {
-            map.ClearPath();
-        }
-        else if (state == UnitState.readyToAttack)
-        {
-            UIManager.HideUI(rangeCursorUI);
-        }
         RemainHolding();
     }
 
@@ -62,12 +65,14 @@ public class UnitOfPlyer : Unit,Selectee {
         if (state == UnitState.readyToMove && PointerEvent.isOnMap)
         {
             Move();
-            map.ClearPath();
         }
-        else if (state == UnitState.readyToAttack && PointerEvent.isOnEnemy) 
+        else if (state == UnitState.readyToAttack && PointerEvent.isOnEnemy)
         {
             Attack(PointerEvent.pointerOnObj.GetComponent<Unit>());
-            UIManager.HideUI(rangeCursorUI);
+        }
+        else if (state == UnitState.readyToSpell && PointerEvent.isOnUnit)
+        {
+            SpellSkill();
         }
         RemainHolding();
     }
@@ -114,7 +119,7 @@ public class UnitOfPlyer : Unit,Selectee {
         }
     }
 
-    public void CheakingRange(int range)
+    public void CheakRange(int range)
     {
         int rangeValue = range * 2 + 1;
         rangeCursorUI.transform.localScale = new Vector3(rangeValue, rangeValue, rangeValue);
@@ -123,7 +128,7 @@ public class UnitOfPlyer : Unit,Selectee {
 
     public void Cancel()
     {
-        if (state == UnitState.readyToAttack || state == UnitState.readyToMove)
+        if (state == UnitState.readyToAttack || state == UnitState.readyToMove || state == UnitState.readyToSpell)
         {
             CancelAction();
         }
@@ -135,4 +140,5 @@ public class UnitOfPlyer : Unit,Selectee {
     {
 
     }
+    
 }

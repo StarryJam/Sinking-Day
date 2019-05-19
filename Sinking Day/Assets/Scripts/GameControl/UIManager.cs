@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour {
 
     public static Canvas UI_UnitStateHud;
 
+    public static SkillPanel skillPanel;
+
     private Vector3 mouseHitPoint;
     private LayerMask mouseHitMask;
 
@@ -83,7 +85,11 @@ public class UIManager : MonoBehaviour {
          Instantiate(UI.gameObject);
     }
     
-
+    //更新选中的单位信息（由鼠标点击事件调用）
+    public static void UpdateSelectInformation()
+    {
+        skillPanel.UpdatePanel(PointerEvent.selected.GetComponent<Unit>());
+    }
 
     
 

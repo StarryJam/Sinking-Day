@@ -651,10 +651,14 @@
     <Compile Include="Assets\Scripts\Map\Astar\Node.cs" />
     <Compile Include="Assets\Scripts\Map\Map_BaseCube.cs" />
     <Compile Include="Assets\Scripts\SetChildren.cs" />
+    <Compile Include="Assets\Scripts\Skills\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Skills\ProjectileDieFVX.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
     <Compile Include="Assets\Scripts\SubObject.cs" />
     <Compile Include="Assets\Scripts\TurretData.cs" />
     <Compile Include="Assets\Scripts\UI\FaceToCamera.cs" />
+    <Compile Include="Assets\Scripts\UI\SkillButton.cs" />
+    <Compile Include="Assets\Scripts\UI\SkillPanel.cs" />
     <Compile Include="Assets\Scripts\UI\UI\UI_endTurnButtonPanel.cs" />
     <Compile Include="Assets\Scripts\UI\UI\UI_endTurnButtonPanelComponents.cs" />
     <Compile Include="Assets\Scripts\UI\UI\UI_StatementHud.cs" />

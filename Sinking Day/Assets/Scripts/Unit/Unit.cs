@@ -20,16 +20,16 @@ public class Unit : MonoBehaviour,Selectee  {
 
 
     /*-----------技能------------*/
-    public List<Skill> skills; 
+    public List<Skill> skills;
+    protected Skill currentSkill;
     /*-----------技能------------*/
 
-
-
-    public static RaycastHit hit;
-    public Canvas stateHudUI;
-    public Canvas rangeCursorUI;
-    public Transform statementUIPos;
-    public Transform rangeCursorPos;
+        
+    [HideInInspector] public Canvas stateHudUI;
+    [HideInInspector] public Canvas rangeCursorUI;
+    [HideInInspector] public Transform statementUIPos;
+    [HideInInspector] public Transform rangeCursorPos;
+    [HideInInspector] public Transform projectilePos;
 
     protected bool isMoving = false;
     public UnitState state;
@@ -42,11 +42,17 @@ public class Unit : MonoBehaviour,Selectee  {
         //UI初始化
         statementUIPos = transform.Find("StatementUIPos");
         rangeCursorPos = transform.Find("RangeCursorPos");
+        projectilePos = transform.Find("ProjectilePos");
         stateHudUI = UIManager.CreateUI(UIManager.UI_UnitStateHud, statementUIPos);
         stateHudUI.GetComponent<UnitStateUI>().unit = this;
         rangeCursorUI = UIManager.CreateUI(UIManager.UI_RangeCursorOnUnit, rangeCursorPos);
         UIManager.HideUI(rangeCursorUI);
         
+        //技能初始化
+        for(int i=0; i< skills.Count; i++)
+        {
+            skills[i] = Instantiate(skills[i], transform);
+        }
 
         map = Grid.map;
         currentHealth = maxHealth;
@@ -63,20 +69,13 @@ public class Unit : MonoBehaviour,Selectee  {
     {
         holding,
         readyToMove,
-        readyToAttack
+        readyToAttack,
+        readyToSpell
     }
 
-    public void ChangingState(UnitState _state)
+    public void ChangeState(UnitState _state)
     {
         state = _state;
-        if (_state == UnitState.holding)
-        {
-            PointerEvent.ChangingPointerState(PointerEvent.PointerState.normal);
-        }
-        if (_state == UnitState.readyToAttack)
-        {
-            PointerEvent.ChangingPointerState(PointerEvent.PointerState.choosingTarget);
-        }
     }
 
     public void BeSelected()
@@ -91,7 +90,7 @@ public class Unit : MonoBehaviour,Selectee  {
     public void DeSelected()
     {
         PointerEvent.selected = null;
-        ChangingState(UnitState.holding);
+        ChangeState(UnitState.holding);
         for (int i = 0; i < transform.childCount; i++)
         {
             Destroy(transform.GetChild(i).gameObject.GetComponent<Outline>());
@@ -177,6 +176,11 @@ public class Unit : MonoBehaviour,Selectee  {
     public void Attack(Unit unit)
     {
         unit.takeDamage(attackDamage);
+    }
+
+    public void SpellSkill()
+    {
+        currentSkill.Spell();
     }
 
     public void takeDamage(float damage)

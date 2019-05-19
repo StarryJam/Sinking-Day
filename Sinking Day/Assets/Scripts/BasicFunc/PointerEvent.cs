@@ -110,6 +110,10 @@ public class PointerEvent : MonoBehaviour {
                         Select();
                     }
                 }
+                if (selected.GetComponent<UnitOfPlyer>() != null)
+                {
+                    UIManager.UpdateSelectInformation();
+                }
             }
         }
     }
@@ -140,6 +144,7 @@ public class PointerEvent : MonoBehaviour {
 
         if (Input.GetMouseButtonUp(0))//鼠标左键松开
         {
+            Debug.Log(pointerOnObj);
             if (!isOnUI)//判断是否点击在UI上
             {
                 if (_pointerState == PointerState.choosingTarget)//判断是否正在释放技能
