@@ -11,27 +11,11 @@ public class StageManager : MonoBehaviour {
 
     public enum TurnStage
     {
-        turnStarting,
         playMoveing,
-        PlayerEnding,
         AIMoving,
-        AIEnding,
-        turnEnding
     }
 
-    public void Test_NextStage()
-    {
-        int lenth = System.Enum.GetNames(turnStage.GetType()).Length;
-        int count = turnStage.GetHashCode();
-        if (count == lenth - 1)
-        {
-            turnStage = TurnStage.turnStarting;
-        }
-        else
-        {
-            turnStage += 1;
-        }
-    }
+    
 
     private void Awake()
     {
@@ -40,7 +24,7 @@ public class StageManager : MonoBehaviour {
 
     void Start()
     {
-        //QEventSystem.RegisterEvent(GameEventID.EndTurnButton.endTurn, EndTurn);
+        StartTurn();
     }
 
 
@@ -53,16 +37,24 @@ public class StageManager : MonoBehaviour {
     private void StartTurn()//回合开始
     {
         //结算Dot伤害
+
+        //冷却技能
+        QEventSystem.SendEvent(GameEventID.Skill.coolDown, 1);
+        UIManager.UpdateSelectInformation();
+
+        turnStage = TurnStage.playMoveing;
+        PlayerMoving();
     }
 
-    private void PlayerMove()//玩家行动
+    private void PlayerMoving()//玩家行动
     {
         //
     }
 
-    private void PlayerEnd()
+    public void PlayerEnd()
     {
-
+        turnStage = TurnStage.AIMoving;
+        AIMoveing();
     }
 
     //public void EndTurn(int key, params object[] param)//回合结束
@@ -70,19 +62,19 @@ public class StageManager : MonoBehaviour {
     //    Debug.Log("回合结束");
     //}
 
-    private void AIMove()//AI行动
+    private void AIMoveing()//AI行动
     {
-
+        AIEnd();
     }
 
-    private void AIEnd()
+    public void AIEnd()
     {
-
+        EndTurn();
     }
 
     private void EndTurn()
     {
-
+        StartTurn();
     }
     
 }

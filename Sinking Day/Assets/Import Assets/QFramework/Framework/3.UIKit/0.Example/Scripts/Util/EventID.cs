@@ -16,14 +16,16 @@ namespace QFramework.EventID
     public static class GameEventID
     {
 
-        public enum EndTurnButton
+        public enum Skill
         {
-            endTurn = QMgrID.Game + 1,
+            coolDown = QMgrID.Game + 1,
         }
 
         public enum Selectee
         {
             inRange = QMgrID.Game + 1,
         }
+
+        
     }
 }

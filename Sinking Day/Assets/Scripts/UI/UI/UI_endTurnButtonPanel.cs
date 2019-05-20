@@ -30,10 +30,10 @@ namespace QFramework.Example
 
 		protected override void RegisterUIEvent()
 		{
-            endTurnButton.onClick.AddListener(() =>
-            {
-                QEventSystem.SendEvent(GameEventID.EndTurnButton.endTurn);
-            });
+            //endTurnButton.onClick.AddListener(() =>
+            //{
+            //    QEventSystem.SendEvent(GameEventID.Skill.endTurn);
+            //});
 		}
 
 		protected override void OnShow()

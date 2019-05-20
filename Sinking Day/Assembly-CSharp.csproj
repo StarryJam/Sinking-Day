@@ -629,6 +629,7 @@
     <Compile Include="Assets\Import Assets\UnityEffects\Assets\Script\DebugLog.cs" />
     <Compile Include="Assets\Import Assets\UnityEffects\Assets\Script\TestRot.cs" />
     <Compile Include="Assets\Import Assets\UnityEffects\Assets\Script\Utils\ShadowUtils.cs" />
+    <Compile Include="Assets\Scripts\AI\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\AStarTest\Test_FindPath.cs" />
     <Compile Include="Assets\Scripts\AStarTest\Test_Grid.cs" />
     <Compile Include="Assets\Scripts\AStarTest\Test_Node.cs" />
@@ -663,8 +664,10 @@
     <Compile Include="Assets\Scripts\UI\UI\UI_endTurnButtonPanelComponents.cs" />
     <Compile Include="Assets\Scripts\UI\UI\UI_StatementHud.cs" />
     <Compile Include="Assets\Scripts\UI\UI\UI_StatementHudComponents.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_UnitInfoHud.cs" />
     <Compile Include="Assets\Scripts\UI\UnitStateUI.cs" />
     <Compile Include="Assets\Scripts\Unit\Unit.cs" />
+    <Compile Include="Assets\Scripts\Unit\UnitOfEnemy.cs" />
     <Compile Include="Assets\Scripts\Unit\UnitOfPlyer.cs" />
     <Compile Include="Assets\Test_PlayerButtons.cs" />
     <Compile Include="Assets\Test_PlayerMove.cs" />

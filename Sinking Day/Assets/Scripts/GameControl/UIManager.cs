@@ -16,10 +16,11 @@ public class UIManager : MonoBehaviour {
     public static Texture2D onFriendPointer;
     public static Texture2D onPointPointer;
 
-    public static Canvas UI_RangeCursorOnMap;
-    public static Canvas UI_RangeCursorOnUnit;
+    public static Canvas ui_RangeCursorOnMap;
+    public static Canvas ui_RangeCursorOnUnit;
 
-    public static Canvas UI_UnitStateHud;
+    public static Canvas ui_UnitStateHud;
+    public static UI_UnitInfoHud ui_UnitInfoHud;
 
     public static SkillPanel skillPanel;
 
@@ -38,16 +39,18 @@ public class UIManager : MonoBehaviour {
         Cursor.SetCursor(defaultPointer, Vector2.zero, CursorMode.Auto);
         /*----加载光标----*/
         
-        UI_RangeCursorOnUnit = ((GameObject)Resources.Load("UI/RangeCursorOnUnit")).GetComponent<Canvas>();
-        UI_RangeCursorOnMap = ((GameObject)Resources.Load("UI/RangeCursorOnMap")).GetComponent<Canvas>();
+        ui_RangeCursorOnUnit = ((GameObject)Resources.Load("UI/RangeCursorOnUnit")).GetComponent<Canvas>();
+        ui_RangeCursorOnMap = ((GameObject)Resources.Load("UI/RangeCursorOnMap")).GetComponent<Canvas>();
         /*----加载技能指示器----*/
 
 
-        UI_UnitStateHud = ((GameObject)Resources.Load("UI/UI_UnitStateHud")).GetComponent<Canvas>();
+        ui_UnitStateHud = ((GameObject)Resources.Load("UI/UI_UnitHuds/UI_UnitStateHud")).GetComponent<Canvas>();
+        ui_UnitInfoHud = GameObject.FindGameObjectWithTag("UI_UnitInfohud").GetComponent<UI_UnitInfoHud>();
+        ui_UnitInfoHud.gameObject.SetActive(false);
         /*----加载单位UI----*/
 
 
-
+        skillPanel = GameObject.FindGameObjectWithTag("SkillPanel").GetComponent<SkillPanel>();
         //UIMgr.OpenPanel<UI_endTurnButtonPanel>(prefabName: "Resources/UI/UI_endTurnButtonPanel");
         /*----初始化UI----*/
 
@@ -56,6 +59,17 @@ public class UIManager : MonoBehaviour {
 
     }
 
+    public void Update()
+    {
+        if (PointerEvent.isOnUnit)//鼠标在单位上时显示单位信息
+        {
+            ShowInformation();
+        }
+        else
+        {
+            HideInformation();
+        }
+    }
 
     //在目标上显示指定UI
     public static Canvas CreateUI(Canvas UI, Transform target)
@@ -88,13 +102,17 @@ public class UIManager : MonoBehaviour {
     //更新选中的单位信息（由鼠标点击事件调用）
     public static void UpdateSelectInformation()
     {
-        skillPanel.UpdatePanel(PointerEvent.selected.GetComponent<Unit>());
+        skillPanel.UpdatePanel();
     }
 
     
 
     public static void ShowInformation()
     {
+        ui_UnitInfoHud.gameObject.SetActive(true);
+        ui_UnitInfoHud.unit = PointerEvent.pointerOnObj.GetComponent<Unit>();
+        ui_UnitInfoHud.transform.position = Input.mousePosition;
+
     //    for (int i = 0; i < informationUI.transform.childCount; i++)
     //    {
     //        if (i < information.Count)
@@ -109,11 +127,13 @@ public class UIManager : MonoBehaviour {
 
     public static void HideInformation()
     {
-    //    if (informationUI != null)
-    //    {
-    //        informationUI.GetComponent<Animator>().ResetTrigger("Show");
-    //        informationUI.GetComponent<Animator>().SetTrigger("Hide");
-    //    }
+        ui_UnitInfoHud.gameObject.SetActive(false);
+
+        //    if (informationUI != null)
+        //    {
+        //        informationUI.GetComponent<Animator>().ResetTrigger("Show");
+        //        informationUI.GetComponent<Animator>().SetTrigger("Hide");
+        //    }
     }
 
     private static void ResetInformation()

@@ -14,6 +14,8 @@ public class Unit : MonoBehaviour,Selectee  {
     public int attackRange = 5;
     public float attackDamage = 10;
     public int moveRange = 5;
+    public int maxActionPoint = 3;
+    public int currentActionPoint;
 
     public float speed = 10;
     /*---------基础属性----------*/
@@ -43,9 +45,9 @@ public class Unit : MonoBehaviour,Selectee  {
         statementUIPos = transform.Find("StatementUIPos");
         rangeCursorPos = transform.Find("RangeCursorPos");
         projectilePos = transform.Find("ProjectilePos");
-        stateHudUI = UIManager.CreateUI(UIManager.UI_UnitStateHud, statementUIPos);
+        stateHudUI = UIManager.CreateUI(UIManager.ui_UnitStateHud, statementUIPos);
         stateHudUI.GetComponent<UnitStateUI>().unit = this;
-        rangeCursorUI = UIManager.CreateUI(UIManager.UI_RangeCursorOnUnit, rangeCursorPos);
+        rangeCursorUI = UIManager.CreateUI(UIManager.ui_RangeCursorOnUnit, rangeCursorPos);
         UIManager.HideUI(rangeCursorUI);
         
         //技能初始化
@@ -54,9 +56,12 @@ public class Unit : MonoBehaviour,Selectee  {
             skills[i] = Instantiate(skills[i], transform);
         }
 
-        map = Grid.map;
+        //属性初始化
         currentHealth = maxHealth;
         state = UnitState.holding;
+        currentActionPoint = maxActionPoint;
+
+        map = Grid.map;
     }
 
     public enum Camp //阵营

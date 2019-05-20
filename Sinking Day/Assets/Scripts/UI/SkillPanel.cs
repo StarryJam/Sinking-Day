@@ -13,19 +13,25 @@ public class SkillPanel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        UIManager.skillPanel = this;
+        //UIManager.skillPanel = this;
         foreach(var button in skillButtonContiner.GetComponentsInChildren<SkillButton>())
         {
             skillButtons.Add(button);
         }
 	}
 	
-    public void UpdatePanel(Unit unit)
+    public void UpdatePanel()
     {
-
-        for (int i=0; i < unit.skills.Count; i++)
+        if (PointerEvent.selected != null)
         {
-            skillButtons[i].UpdateButton(unit.skills[i]);
+            if(PointerEvent.selected.GetComponent<Unit>() != null)
+            {
+                Unit unit = PointerEvent.selected.GetComponent<Unit>();
+                for (int i = 0; i < unit.skills.Count; i++)
+                {
+                    skillButtons[i].UpdateButton(unit.skills[i]);
+                }
+            }
         }
     }
 

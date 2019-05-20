@@ -8,6 +8,8 @@ TagManager:
   - Turret
   - BaseCube
   - Map
+  - SkillPanel
+  - UI_UnitInfohud
   layers:
   - Default
   - TransparentFX

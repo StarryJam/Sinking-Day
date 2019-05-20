@@ -54,7 +54,7 @@ MonoBehaviour:
   skillName: FireBall
   skillIcon: {fileID: 21300000, guid: 7193f2421c12169419d2129fa1f6b9bc, type: 3}
   type: 1
-  coolDown: 1
+  coolDown: 2
   damage: 10
   spellRange: 10
   influenceRange: 5

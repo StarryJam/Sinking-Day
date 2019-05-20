@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using QFramework;
+using QFramework.EventID;
 
 public class Skill : MonoBehaviour {
 
@@ -38,7 +40,8 @@ public class Skill : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         speller = transform.parent.GetComponent<Unit>();
-	}
+        QEventSystem.RegisterEvent(GameEventID.Skill.coolDown, CoolDown);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -79,11 +82,11 @@ public class Skill : MonoBehaviour {
         
     }
 
-    public void CoolDown(int value)
+    public void CoolDown(int key, params object[] param)
     {
         if (restCooldown > 0)
         {
-            restCooldown -= value;
+            restCooldown -= (int)param[0];
             if (restCooldown < 0)
                 restCooldown = 0;
         }
