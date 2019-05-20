@@ -58,7 +58,7 @@ public class Skill : MonoBehaviour {
 
     }
 
-    public void Spell()
+    public void Spell(Unit target)//单体技能释放
     {
         if (restCooldown == 0)//冷却完成才能释放
         {
@@ -70,7 +70,7 @@ public class Skill : MonoBehaviour {
                 else
                     currentProjectile = Instantiate(Projectile, transform);
                 if (isToEnemy)
-                    currentProjectile.SetProjectile(PointerEvent.pointerOnObj, ProjectileSpeed, damage);
+                    currentProjectile.SetProjectile(target.gameObject, ProjectileSpeed, damage);
             }
             restCooldown = coolDown;
             UIManager.UpdateSelectInformation();

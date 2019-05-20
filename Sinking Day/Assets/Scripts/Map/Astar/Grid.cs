@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour {
 
+    ///////////////////////////////////////////////相邻两格的距离为2
+
     private bool isShowPath = false;
 
     public static Grid map;

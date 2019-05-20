@@ -54,7 +54,7 @@ public class StageManager : MonoBehaviour {
     public void PlayerEnd()
     {
         turnStage = TurnStage.AIMoving;
-        AIMoveing();
+        StartCoroutine(AIMoveing());
     }
 
     //public void EndTurn(int key, params object[] param)//回合结束
@@ -62,8 +62,9 @@ public class StageManager : MonoBehaviour {
     //    Debug.Log("回合结束");
     //}
 
-    private void AIMoveing()//AI行动
+    private IEnumerator AIMoveing()//AI行动
     {
+        yield return(StartCoroutine(EnemyAI.enemyAISingleton.AIAct()));
         AIEnd();
     }
 

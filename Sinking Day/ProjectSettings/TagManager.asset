@@ -10,6 +10,7 @@ TagManager:
   - Map
   - SkillPanel
   - UI_UnitInfohud
+  - UnitOfPlayer
   layers:
   - Default
   - TransparentFX

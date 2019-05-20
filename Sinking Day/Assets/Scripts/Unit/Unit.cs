@@ -17,11 +17,12 @@ public class Unit : MonoBehaviour,Selectee  {
     public int maxActionPoint = 3;
     public int currentActionPoint;
 
-    public float speed = 10;
+    public float speed = 10;//在地图上的移动速度
     /*---------基础属性----------*/
 
 
     /*-----------技能------------*/
+    public Skill normalAttack;
     public List<Skill> skills;
     protected Skill currentSkill;
     /*-----------技能------------*/
@@ -49,8 +50,10 @@ public class Unit : MonoBehaviour,Selectee  {
         stateHudUI.GetComponent<UnitStateUI>().unit = this;
         rangeCursorUI = UIManager.CreateUI(UIManager.ui_RangeCursorOnUnit, rangeCursorPos);
         UIManager.HideUI(rangeCursorUI);
-        
+
         //技能初始化
+        normalAttack = ((GameObject)Instantiate(Resources.Load("Prefebs/Skills/NormalAttack/NormalAttack_Skill"),transform)).GetComponent<Skill>();
+        normalAttack.spellRange = attackRange;
         for(int i=0; i< skills.Count; i++)
         {
             skills[i] = Instantiate(skills[i], transform);
@@ -131,9 +134,9 @@ public class Unit : MonoBehaviour,Selectee  {
 
 
 
-    public void Move()
+    public IEnumerator Move()
     {
-        StartCoroutine(MovePath(map.path));
+        yield return StartCoroutine(MovePath(map.path));
         state = UnitState.holding;
         map.path.Clear();
     }
@@ -180,12 +183,13 @@ public class Unit : MonoBehaviour,Selectee  {
 
     public void Attack(Unit unit)
     {
-        unit.takeDamage(attackDamage);
+        normalAttack.Spell(unit);
     }
-
+    
     public void SpellSkill()
     {
-        currentSkill.Spell();
+        if (currentSkill.type == Skill.SkillType.toUnit)
+            currentSkill.Spell(PointerEvent.pointerOnObj.GetComponent<Unit>());
     }
 
     public void takeDamage(float damage)
@@ -206,5 +210,6 @@ public class Unit : MonoBehaviour,Selectee  {
     {
         Destroy(gameObject);
     }
+
 
 }

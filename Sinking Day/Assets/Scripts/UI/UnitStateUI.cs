@@ -8,7 +8,9 @@ public class UnitStateUI : MonoBehaviour {
     public Unit unit;
     public Image healthBar_Current;
     private Vector3 originPos;
-    public GameObject ActionPoints;
+    public GameObject actionPoints;
+    public static Sprite actionPointImg;
+    public static Sprite usingActionPointImg;
 
     private void Start()
     {
@@ -30,14 +32,26 @@ public class UnitStateUI : MonoBehaviour {
 
     public void UpdateActionPoint()
     {
-        for (int i = 0; i < ActionPoints.transform.childCount; i++)
+        for (int i = 0; i < actionPoints.transform.childCount; i++)
         {
-            ActionPoints.transform.GetChild(i).gameObject.SetActive(false);
+            actionPoints.transform.GetChild(i).gameObject.SetActive(false);
         }
 
         for (int i = 0; i < unit.currentActionPoint; i++)
         {
-            ActionPoints.transform.GetChild(i).gameObject.SetActive(true);
+            actionPoints.transform.GetChild(i).gameObject.SetActive(true);
+        }
+    }
+
+    public void UsingActionPoint(int point)
+    {
+        for (int i = 0; i < actionPoints.transform.childCount; i++)
+        {
+            actionPoints.transform.GetChild(i).GetComponent<Image>().sprite = actionPointImg;
+        }
+        for (int i = 0; i < point; i++)
+        {
+            actionPoints.transform.GetChild(unit.currentActionPoint - 1 - i).GetComponent<Image>().sprite = usingActionPointImg;
         }
     }
 }

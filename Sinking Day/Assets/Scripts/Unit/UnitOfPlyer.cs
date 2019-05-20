@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class UnitOfPlyer : Unit, Selectee {
 
+    private int needAP;
 
-    // Use this for initialization
+    new void Awake()
+    {
+        gameObject.tag = "UnitOfPlayer";
+    }
+
     new void Start() {
         base.Start();
     }
@@ -46,12 +51,23 @@ public class UnitOfPlyer : Unit, Selectee {
         CheakRange(skill.spellRange);
     }
 
+    private void ReadyToUseAP(int point)
+    {
+        needAP = point;
+        stateHudUI.GetComponent<UnitStateUI>().UsingActionPoint(point);
+    }
+
+    private void UsingAP()
+    {
+        currentActionPoint -= needAP;
+    }
+
     public void RemainHolding()
     {
         ChangeState(UnitState.holding);
         currentSkill = null;
         map.ClearPath();
-        UIManager.HideUI(rangeCursorUI);
+        ReadyToUseAP(0);
         PointerEvent.ChangingPointerState(PointerEvent.PointerState.normal);
     }
 
@@ -64,15 +80,18 @@ public class UnitOfPlyer : Unit, Selectee {
     {
         if (state == UnitState.readyToMove && PointerEvent.isOnMap)
         {
-            Move();
+            StartCoroutine(Move());
+            UsingAP();
         }
         else if (state == UnitState.readyToAttack && PointerEvent.isOnEnemy)
         {
             Attack(PointerEvent.pointerOnObj.GetComponent<Unit>());
+            UsingAP();
         }
         else if (state == UnitState.readyToSpell && PointerEvent.isOnUnit)
         {
             SpellSkill();
+            UsingAP();
         }
         RemainHolding();
     }
@@ -109,13 +128,19 @@ public class UnitOfPlyer : Unit, Selectee {
 
     private void PlayerChoosingPath()
     {
-        map.GenerateMoveRange(transform.position, moveRange);
+        map.GenerateMoveRange(transform.position, moveRange * currentActionPoint);
 
         if (PointerEvent.isOnMap) //判断是否在地图上
         {
             Map_BaseCube currentCube = PointerEvent.pointerOnObj.GetComponent<Map_BaseCube>();
             if (currentCube.node.state == Node.NodeState.inMoveRange || currentCube.node.state == Node.NodeState.inPath)
+            {
                 ChoosePath(currentCube);
+                int needActionPoint = map.path.Count / moveRange;
+                if (map.path.Count % moveRange != 0)
+                    needActionPoint++;
+                ReadyToUseAP(needActionPoint);
+            }
         }
     }
 

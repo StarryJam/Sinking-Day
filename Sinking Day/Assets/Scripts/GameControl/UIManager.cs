@@ -47,6 +47,8 @@ public class UIManager : MonoBehaviour {
         ui_UnitStateHud = ((GameObject)Resources.Load("UI/UI_UnitHuds/UI_UnitStateHud")).GetComponent<Canvas>();
         ui_UnitInfoHud = GameObject.FindGameObjectWithTag("UI_UnitInfohud").GetComponent<UI_UnitInfoHud>();
         ui_UnitInfoHud.gameObject.SetActive(false);
+        UnitStateUI.actionPointImg = Resources.Load("Image/UI/UI_Statementhud/ActionPoint_Img", typeof(Sprite)) as Sprite;
+        UnitStateUI.usingActionPointImg = Resources.Load("Image/UI/UI_Statementhud/ActionPoint(Using)_Img", typeof(Sprite)) as Sprite;
         /*----加载单位UI----*/
 
 

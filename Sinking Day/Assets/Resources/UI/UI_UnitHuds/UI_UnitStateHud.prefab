@@ -477,7 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unit: {fileID: 0}
   healthBar_Current: {fileID: 114646452105949176}
-  ActionPoints: {fileID: 1223955792065452}
+  actionPoints: {fileID: 1223955792065452}
 --- !u!114 &114893102999607668
 MonoBehaviour:
   m_ObjectHideFlags: 1
