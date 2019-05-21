@@ -6,8 +6,9 @@ public class UnitOfPlyer : Unit, Selectee {
 
     private int needAP;
 
-    new void Awake()
+    new public void Awake()
     {
+        base.Awake();
         gameObject.tag = "UnitOfPlayer";
     }
 
@@ -28,7 +29,7 @@ public class UnitOfPlyer : Unit, Selectee {
             RemainHolding();
         }
     }
-
+    
 
     public void ReadyToMove()
     {
@@ -69,6 +70,7 @@ public class UnitOfPlyer : Unit, Selectee {
         map.ClearPath();
         ReadyToUseAP(0);
         PointerEvent.ChangingPointerState(PointerEvent.PointerState.normal);
+        UIManager.HideUI(rangeCursorUI);
     }
 
     public void CancelAction()
@@ -96,7 +98,7 @@ public class UnitOfPlyer : Unit, Selectee {
         RemainHolding();
     }
 
-    public void ControlAndAct()
+    private void ControlAndAct()
     {
         //UI
 
@@ -111,17 +113,6 @@ public class UnitOfPlyer : Unit, Selectee {
             else
             {
                 map.UndisplayPath();
-            }
-            if (!PointerEvent.isOnUI)//判断鼠标是否在UI上
-            {
-                if (Input.GetMouseButtonUp(0))
-                {
-                    DoAction();
-                }
-                if (Input.GetMouseButtonUp(1))
-                {
-                    CancelAction();
-                }
             }
         }
     }
@@ -160,10 +151,6 @@ public class UnitOfPlyer : Unit, Selectee {
         else
             DeSelected();
     }
-
-    public void MouseHit()
-    {
-
-    }
+    
     
 }

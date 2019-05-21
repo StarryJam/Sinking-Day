@@ -16,9 +16,9 @@ namespace QFramework.EventID
     public static class GameEventID
     {
 
-        public enum Skill
+        public enum Turn
         {
-            coolDown = QMgrID.Game + 1,
+            endTurn = QMgrID.Game + 1,
         }
 
         public enum Selectee

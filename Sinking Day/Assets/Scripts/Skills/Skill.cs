@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using QFramework;
 using QFramework.EventID;
 
-public class Skill : MonoBehaviour {
+public class Skill : MonoBasedOnTurn {
 
     public enum SkillType
     {
@@ -40,7 +40,6 @@ public class Skill : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         speller = transform.parent.GetComponent<Unit>();
-        QEventSystem.RegisterEvent(GameEventID.Skill.coolDown, CoolDown);
     }
 	
 	// Update is called once per frame
@@ -82,11 +81,16 @@ public class Skill : MonoBehaviour {
         
     }
 
-    public void CoolDown(int key, params object[] param)
+    public override void AtTurnStart()
+    {
+        CoolDown(1);
+    }
+
+    public void CoolDown(int value)
     {
         if (restCooldown > 0)
         {
-            restCooldown -= (int)param[0];
+            restCooldown -= value;
             if (restCooldown < 0)
                 restCooldown = 0;
         }

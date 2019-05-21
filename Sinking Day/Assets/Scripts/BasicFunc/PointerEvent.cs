@@ -147,12 +147,22 @@ public class PointerEvent : MonoBehaviour {
             //Debug.Log(pointerOnObj);
             if (!isOnUI)//判断是否点击在UI上
             {
-                if (_pointerState == PointerState.choosingTarget)//判断是否正在释放技能
+                if (selected != null)
                 {
-                    //castingSkill.CastSkill();
-                    if (selected.GetComponent<UnitOfPlyer>() != null)
+                    if (selected.GetComponent<UnitOfPlyer>() != null)//是否玩家被选中
                     {
-                        selected.GetComponent<UnitOfPlyer>().DoAction();
+                        if (selected.GetComponent<Unit>().state != Unit.UnitState.holding)//判断是否正在操作
+                        {
+                            selected.GetComponent<UnitOfPlyer>().DoAction();
+                        }
+                        else
+                        {
+                            Select();
+                        }
+                    }
+                    else
+                    {
+                        Select();
                     }
                 }
                 else

@@ -19,8 +19,13 @@ public class UIManager : MonoBehaviour {
     public static Canvas ui_RangeCursorOnMap;
     public static Canvas ui_RangeCursorOnUnit;
 
+    public static UI_SkillTreePanel skillTreePanel;
+    public static UI_SkillTree skillTree;
+    public static UI_SkillTreeLayer skillTreeLayer;
+
     public static Canvas ui_UnitStateHud;
     public static UI_UnitInfoHud ui_UnitInfoHud;
+    public static GameObject skillBtn;
 
     public static SkillPanel skillPanel;
 
@@ -44,6 +49,18 @@ public class UIManager : MonoBehaviour {
         /*----加载技能指示器----*/
 
 
+        skillBtn = (GameObject)Resources.Load("Assets/Resources/UI/skillButton");
+        /*----加载技能面板UI----*/
+
+
+
+
+        skillTreePanel = ((GameObject)Resources.Load("UI/UI_SkillTree/UI_SkillTreePanel")).GetComponent<UI_SkillTreePanel>();
+        skillTree = ((GameObject)Resources.Load("UI/UI_SkillTree/UI_SkillTree")).GetComponent<UI_SkillTree>();
+        skillTreeLayer = ((GameObject)Resources.Load("UI/UI_SkillTree/UI_SkillTreeLayer")).GetComponent<UI_SkillTreeLayer>();
+        /*----加载技能树UI----*/
+
+
         ui_UnitStateHud = ((GameObject)Resources.Load("UI/UI_UnitHuds/UI_UnitStateHud")).GetComponent<Canvas>();
         ui_UnitInfoHud = GameObject.FindGameObjectWithTag("UI_UnitInfohud").GetComponent<UI_UnitInfoHud>();
         ui_UnitInfoHud.gameObject.SetActive(false);
@@ -53,6 +70,7 @@ public class UIManager : MonoBehaviour {
 
 
         skillPanel = GameObject.FindGameObjectWithTag("SkillPanel").GetComponent<SkillPanel>();
+
         //UIMgr.OpenPanel<UI_endTurnButtonPanel>(prefabName: "Resources/UI/UI_endTurnButtonPanel");
         /*----初始化UI----*/
 
@@ -63,7 +81,7 @@ public class UIManager : MonoBehaviour {
 
     public void Update()
     {
-        if (PointerEvent.isOnUnit)//鼠标在单位上时显示单位信息
+        if (PointerEvent.isOnUnit && !PointerEvent.isOnUI)//鼠标在单位上时显示单位信息
         {
             ShowInformation();
         }
@@ -107,7 +125,18 @@ public class UIManager : MonoBehaviour {
         skillPanel.UpdatePanel();
     }
 
-    
+    public static void HideSelectInformation()
+    {
+        skillPanel.gameObject.SetActive(false);
+        skillTreePanel.gameObject.SetActive(false);
+    }
+
+    public static void ShowSelectInformation()
+    {
+        skillPanel.gameObject.SetActive(true);
+    }
+
+
 
     public static void ShowInformation()
     {
@@ -115,27 +144,12 @@ public class UIManager : MonoBehaviour {
         ui_UnitInfoHud.unit = PointerEvent.pointerOnObj.GetComponent<Unit>();
         ui_UnitInfoHud.transform.position = Input.mousePosition;
 
-    //    for (int i = 0; i < informationUI.transform.childCount; i++)
-    //    {
-    //        if (i < information.Count)
-    //            informationUI.transform.GetChild(i).GetComponent<Text>().text = information[i];
-    //        else
-    //            informationUI.transform.GetChild(i).GetComponent<Text>().text = "";
-    //    }
-    //    informationUI.GetComponent<Animator>().ResetTrigger("Hide");
-    //    informationUI.GetComponent<Animator>().SetTrigger("Show");
-    //    ResetInformation();
     }
 
     public static void HideInformation()
     {
         ui_UnitInfoHud.gameObject.SetActive(false);
 
-        //    if (informationUI != null)
-        //    {
-        //        informationUI.GetComponent<Animator>().ResetTrigger("Show");
-        //        informationUI.GetComponent<Animator>().SetTrigger("Hide");
-        //    }
     }
 
     private static void ResetInformation()

@@ -59,6 +59,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1617752167246812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4941322671956240}
+  m_Layer: 0
+  m_Name: ProjectilePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1854455371990836
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,7 +83,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4156143159416078}
   - component: {fileID: 65290470720117858}
-  - component: {fileID: 114754743010825034}
   - component: {fileID: 114238901600308960}
   m_Layer: 0
   m_Name: Player
@@ -84,12 +98,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1854455371990836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.81, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4895919519402998}
+  - {fileID: 4941322671956240}
   - {fileID: 4317653045637806}
   - {fileID: 4940716511680704}
+  - {fileID: 4895919519402998}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -117,7 +132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4156143159416078}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4940716511680704
 Transform:
@@ -131,6 +146,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4156143159416078}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4941322671956240
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1617752167246812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1, y: 1.76, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4156143159416078}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23340931886804520
 MeshRenderer:
@@ -198,38 +226,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 0}
-  speed: 10
   maxHealth: 100
   currentHealth: 0
+  attackRange: 3
   attackDamage: 10
+  moveRange: 2
+  maxActionPoint: 2
+  currentActionPoint: 0
+  speed: 10
+  normalAttack: {fileID: 0}
+  skills:
+  - {fileID: 114257125292994246, guid: 5a57fc591b07ffa44b82129ec6d5b93f, type: 2}
   stateHudUI: {fileID: 0}
   rangeCursorUI: {fileID: 0}
   statementUIPos: {fileID: 0}
   rangeCursorPos: {fileID: 0}
+  projectilePos: {fileID: 0}
   state: 0
   camp: 0
---- !u!114 &114754743010825034
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1854455371990836}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d0cc561af6f28447bc6b74b6b3cc35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map: {fileID: 0}
-  speed: 10
-  maxHealth: 100
-  currentHealth: 0
-  attackDamage: 10
-  stateHudUI: {fileID: 0}
-  rangeCursorUI: {fileID: 0}
-  statementUIPos: {fileID: 0}
-  rangeCursorPos: {fileID: 0}
-  state: 0
-  camp: 0
+  skillTree: {fileID: 114682270459426766, guid: 806d7ec038e0f4147a2353c6885d4214,
+    type: 2}
 --- !u!136 &136583550801922038
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -44,16 +44,17 @@ public class UnitOfEnemy : Unit
         }
         map.path = temp;
         yield return StartCoroutine(Move());
-    }
 
+
+    }
 
     public bool IsTargetInRangeAtNode(Node node, int range)
     {
         return (Vector3.Distance(target.transform.position, node.mapCube.transform.position) / 2 <= range);
     }
-    public bool IsTargetInRange(int range)
-    {
-        return (Vector3.Distance(target.transform.position, transform.position) / 2 <= range);
-    }
+
+
+
+
 
 }

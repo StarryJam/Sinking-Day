@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using cakeslice;
 
-public class Unit : MonoBehaviour,Selectee  {
+public class Unit : MonoBasedOnTurn,Selectee  {
 
     public Grid map;
 
@@ -22,8 +22,10 @@ public class Unit : MonoBehaviour,Selectee  {
 
 
     /*-----------技能------------*/
+    public int SkillPoint = 5;
     public Skill normalAttack;
     public List<Skill> skills;
+    public List<SkillTree> skillTrees;
     protected Skill currentSkill;
     /*-----------技能------------*/
 
@@ -38,7 +40,10 @@ public class Unit : MonoBehaviour,Selectee  {
     public UnitState state;
     public Camp camp;
 
-
+    new public void Awake()
+    {
+        base.Awake();
+    }
 
     public void Start()
     {
@@ -93,6 +98,10 @@ public class Unit : MonoBehaviour,Selectee  {
         {
             transform.GetChild(i).gameObject.AddComponent<Outline>();
         }
+        if (GetComponent<UnitOfPlyer>() != null)
+        {
+            UIManager.ShowSelectInformation();
+        }
     }
 
     public void DeSelected()
@@ -103,6 +112,7 @@ public class Unit : MonoBehaviour,Selectee  {
         {
             Destroy(transform.GetChild(i).gameObject.GetComponent<Outline>());
         }
+        UIManager.HideSelectInformation();
     }
 
 
@@ -206,10 +216,26 @@ public class Unit : MonoBehaviour,Selectee  {
         }
     }
 
+    public override void AtTurnStart()
+    {
+        currentActionPoint = maxActionPoint;
+    }
+
+    public void LearnSkill(Skill skill)
+    {
+        skills.Add(Instantiate(skill, transform));
+        UIManager.UpdateSelectInformation();
+        SkillPoint--;
+
+    }
+
     private void Die()
     {
         Destroy(gameObject);
     }
 
-
+    public bool IsTargetInRange(Unit target, int range)
+    {
+        return ((Vector3.Distance(target.transform.position, transform.position) - 1) / 2 <= range);
+    }
 }

@@ -13,6 +13,7 @@ public class SkillPanel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        gameObject.SetActive(false);
         //UIManager.skillPanel = this;
         foreach(var button in skillButtonContiner.GetComponentsInChildren<SkillButton>())
         {

@@ -634,6 +634,8 @@
     <Compile Include="Assets\Scripts\AStarTest\Test_Grid.cs" />
     <Compile Include="Assets\Scripts\AStarTest\Test_Node.cs" />
     <Compile Include="Assets\Scripts\BasicFunc\Basic_Movement.cs" />
+    <Compile Include="Assets\Scripts\BasicFunc\MathOnGrid.cs" />
+    <Compile Include="Assets\Scripts\BasicFunc\MonoBasedOnTurn.cs" />
     <Compile Include="Assets\Scripts\BasicFunc\PointerEvent.cs" />
     <Compile Include="Assets\Scripts\Blood.cs" />
     <Compile Include="Assets\Scripts\BuildButton.cs" />
@@ -655,6 +657,7 @@
     <Compile Include="Assets\Scripts\Skills\Projectile.cs" />
     <Compile Include="Assets\Scripts\Skills\ProjectileDieFVX.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
+    <Compile Include="Assets\Scripts\Skills\SkillTree.cs" />
     <Compile Include="Assets\Scripts\SubObject.cs" />
     <Compile Include="Assets\Scripts\TurretData.cs" />
     <Compile Include="Assets\Scripts\UI\FaceToCamera.cs" />
@@ -664,6 +667,10 @@
     <Compile Include="Assets\Scripts\UI\UI\UI_endTurnButtonPanelComponents.cs" />
     <Compile Include="Assets\Scripts\UI\UI\UI_StatementHud.cs" />
     <Compile Include="Assets\Scripts\UI\UI\UI_StatementHudComponents.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_SkillTree\SkillTreeBtn.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_SkillTree\UI_SkillTree.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_SkillTree\UI_SkillTreeLayer.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_SkillTree\UI_SkillTreePanel.cs" />
     <Compile Include="Assets\Scripts\UI\UI_UnitInfoHud.cs" />
     <Compile Include="Assets\Scripts\UI\UnitStateUI.cs" />
     <Compile Include="Assets\Scripts\Unit\Unit.cs" />

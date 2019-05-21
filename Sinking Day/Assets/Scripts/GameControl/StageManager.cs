@@ -39,7 +39,7 @@ public class StageManager : MonoBehaviour {
         //结算Dot伤害
 
         //冷却技能
-        QEventSystem.SendEvent(GameEventID.Skill.coolDown, 1);
+        QEventSystem.SendEvent(GameEventID.Turn.endTurn);
         UIManager.UpdateSelectInformation();
 
         turnStage = TurnStage.playMoveing;
