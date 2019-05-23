@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\BaseCubeTset.cs" />
     <Compile Include="Assets\CameraControl.cs" />
+    <Compile Include="Assets\Guider.cs" />
     <Compile Include="Assets\Import Assets\OutlineEffect\Demo\MaterialSwitcher.cs" />
     <Compile Include="Assets\Import Assets\OutlineEffect\Demo\OutlineAnimation.cs" />
     <Compile Include="Assets\Import Assets\OutlineEffect\Demo\Rotate.cs" />
@@ -667,6 +668,7 @@
     <Compile Include="Assets\Scripts\UI\UI\UI_endTurnButtonPanelComponents.cs" />
     <Compile Include="Assets\Scripts\UI\UI\UI_StatementHud.cs" />
     <Compile Include="Assets\Scripts\UI\UI\UI_StatementHudComponents.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_PopInfo.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillTree\SkillTreeBtn.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillTree\UI_SkillTree.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillTree\UI_SkillTreeLayer.cs" />
@@ -679,6 +681,7 @@
     <Compile Include="Assets\Test_PlayerButtons.cs" />
     <Compile Include="Assets\Test_PlayerMove.cs" />
     <Compile Include="Assets\Test_StageText.cs" />
+    <Compile Include="Assets\TipArrow.cs" />
     <None Include="Assets\Import Assets\UnityEffects\Assets\ShaderAndMat\Charactar.shader" />
     <None Include="Assets\Import Assets\QFramework\Framework\readme.txt" />
     <None Include="Assets\Import Assets\OutlineEffect\Resources\OutlineShader.shader" />

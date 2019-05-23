@@ -11,6 +11,8 @@ TagManager:
   - SkillPanel
   - UI_UnitInfohud
   - UnitOfPlayer
+  - MainCanvas
+  - UI_PopInfo
   layers:
   - Default
   - TransparentFX

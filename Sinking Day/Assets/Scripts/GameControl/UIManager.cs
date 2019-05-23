@@ -16,6 +16,11 @@ public class UIManager : MonoBehaviour {
     public static Texture2D onFriendPointer;
     public static Texture2D onPointPointer;
 
+    public Canvas mainCanvas;
+
+    public static Image tipBox;
+    public static GameObject tipArrow;
+
     public static Canvas ui_RangeCursorOnMap;
     public static Canvas ui_RangeCursorOnUnit;
 
@@ -25,6 +30,7 @@ public class UIManager : MonoBehaviour {
 
     public static Canvas ui_UnitStateHud;
     public static UI_UnitInfoHud ui_UnitInfoHud;
+    public static UI_PopInfo ui_PopInfo;
     public static GameObject skillBtn;
 
     public static SkillPanel skillPanel;
@@ -36,6 +42,19 @@ public class UIManager : MonoBehaviour {
     private void Awake()
     {
         uiManager = this;
+
+        mainCanvas = GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<Canvas>();
+
+
+        tipBox = ((GameObject)Resources.Load("UI/TipBox")).GetComponent<Image>();
+        tipBox = Instantiate(tipBox, mainCanvas.transform);
+        tipBox.gameObject.SetActive(false);
+        tipArrow = ((GameObject)Resources.Load("UI/TipArrow"));
+        tipArrow = Instantiate(tipArrow);
+        tipArrow.gameObject.SetActive(false);
+        ui_PopInfo = GameObject.FindGameObjectWithTag("UI_PopInfo").GetComponent<UI_PopInfo>();
+        ui_PopInfo.gameObject.SetActive(false);
+        /*----加载导航UI----*/
 
         defaultPointer = (Texture2D)Resources.Load("Image/Pointer/Pointer");
         onEnemyPointer = (Texture2D)Resources.Load("Image/Pointer/OnEnemy");
@@ -160,6 +179,39 @@ public class UIManager : MonoBehaviour {
     //public static void NotEnoughMoney()
     //{
     //    money.SetTrigger("NotEnoughMoney");
+    }
+
+    public static void ShowTipBox(RectTransform rect)
+    {
+        tipBox.gameObject.SetActive(true);
+        tipBox.rectTransform.SetSizeWidth(rect.rect.width * 1.2f);
+        tipBox.rectTransform.SetSizeHeight(rect.rect.height * 1.2f);
+        tipBox.transform.position = rect.position;
+    }
+    public static void HideTipBox()
+    {
+        tipBox.gameObject.SetActive(false);
+    }
+
+    public static void ShowTipArrow(GameObject obj)
+    {
+        tipArrow.gameObject.SetActive(true);
+        tipArrow.GetComponent<TipArrow>().SetPosition(obj.transform.position);
+    }
+    public static void HideTipArror()
+    {
+        tipArrow.gameObject.SetActive(false);
+    }
+
+    public static void SetPopInfo(string text)
+    {
+        ui_PopInfo.gameObject.SetActive(true);
+        ui_PopInfo.SetText(text);
+    }
+
+    public static void HidePopInfo()
+    {
+        ui_PopInfo.gameObject.SetActive(false);
     }
 }
 

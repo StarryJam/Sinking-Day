@@ -23,9 +23,13 @@ namespace QFramework.EventID
 
         public enum Selectee
         {
-            inRange = QMgrID.Game + 1,
+            inRange = QMgrID.Game + 2,
         }
 
+        public enum Guider
+        {
+            compeletStep = QMgrID.Game + 3,
+        }
         
     }
 }

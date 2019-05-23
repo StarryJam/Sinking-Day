@@ -23,7 +23,7 @@ public class UI_SkillTreePanel : MonoBehaviour {
 
     private void Update()
     {
-        UpdateView();
+            UpdateView();
     }
 
     public void SetView(Unit _unit)
@@ -39,6 +39,7 @@ public class UI_SkillTreePanel : MonoBehaviour {
 
     public void UpdateView()
     {
-        SkillPointText.text = "Skill Point: " + unit.SkillPoint.ToString();
+        if (unit != null)
+            SkillPointText.text = "Skill Point: " + unit.SkillPoint.ToString();
     }
 }

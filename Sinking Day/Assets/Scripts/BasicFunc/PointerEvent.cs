@@ -7,6 +7,7 @@ using cakeslice;
 public class PointerEvent : MonoBehaviour {
 
     public static GameObject selected;
+    public static GameObject clickObj;
     //public List<string> selectableObj;
     public static bool isCasting = false;
     //public static Skill castingSkill;
@@ -141,6 +142,8 @@ public class PointerEvent : MonoBehaviour {
     
     void Update () {
         PointerOnWhat();
+        
+
 
         if (Input.GetMouseButtonUp(0))//鼠标左键松开
         {

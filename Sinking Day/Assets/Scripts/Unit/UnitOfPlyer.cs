@@ -88,6 +88,7 @@ public class UnitOfPlyer : Unit, Selectee {
         else if (state == UnitState.readyToAttack && PointerEvent.isOnEnemy)
         {
             Attack(PointerEvent.pointerOnObj.GetComponent<Unit>());
+            Debug.Log(1);
             UsingAP();
         }
         else if (state == UnitState.readyToSpell && PointerEvent.isOnUnit)

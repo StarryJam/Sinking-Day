@@ -73,6 +73,8 @@ public class Grid : MonoBehaviour {
         UpdateMap();
     }
 
+   
+
     private void UpdateMap()
     {
         foreach (var node in gridNodes)
@@ -213,11 +215,11 @@ public class Grid : MonoBehaviour {
             return 14 * cntX + 10 * (cntY - cntX);
     }
 
-    private Node GetNodeFromPosition(Vector3 position)
+    public Node GetNodeFromPosition(Vector3 position)
     {
-        Vector3 playerPosition = position - transform.position;
-        float percentX = (playerPosition.x + gridSize.x / 2) / gridSize.x;
-        float percentY = (playerPosition.z + gridSize.y / 2) / gridSize.y;
+        Vector3 nodePosition = position - transform.position;
+        float percentX = (nodePosition.x + gridSize.x / 2) / gridSize.x;
+        float percentY = (nodePosition.z + gridSize.y / 2) / gridSize.y;
         percentX = Mathf.Clamp01(percentX);
         percentY = Mathf.Clamp01(percentY);
 
