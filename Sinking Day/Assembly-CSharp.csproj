@@ -63,7 +63,6 @@
   <ItemGroup>
     <Compile Include="Assets\BaseCubeTset.cs" />
     <Compile Include="Assets\CameraControl.cs" />
-    <Compile Include="Assets\Guider.cs" />
     <Compile Include="Assets\Import Assets\OutlineEffect\Demo\MaterialSwitcher.cs" />
     <Compile Include="Assets\Import Assets\OutlineEffect\Demo\OutlineAnimation.cs" />
     <Compile Include="Assets\Import Assets\OutlineEffect\Demo\Rotate.cs" />
@@ -630,23 +629,28 @@
     <Compile Include="Assets\Import Assets\UnityEffects\Assets\Script\DebugLog.cs" />
     <Compile Include="Assets\Import Assets\UnityEffects\Assets\Script\TestRot.cs" />
     <Compile Include="Assets\Import Assets\UnityEffects\Assets\Script\Utils\ShadowUtils.cs" />
+    <Compile Include="Assets\Loader.cs" />
+    <Compile Include="Assets\RangeCursor.cs" />
     <Compile Include="Assets\Scripts\AI\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\AStarTest\Test_FindPath.cs" />
     <Compile Include="Assets\Scripts\AStarTest\Test_Grid.cs" />
     <Compile Include="Assets\Scripts\AStarTest\Test_Node.cs" />
     <Compile Include="Assets\Scripts\BasicFunc\Basic_Movement.cs" />
+    <Compile Include="Assets\Scripts\BasicFunc\DestroryOnTime.cs" />
     <Compile Include="Assets\Scripts\BasicFunc\MathOnGrid.cs" />
     <Compile Include="Assets\Scripts\BasicFunc\MonoBasedOnTurn.cs" />
     <Compile Include="Assets\Scripts\BasicFunc\PointerEvent.cs" />
-    <Compile Include="Assets\Scripts\Blood.cs" />
     <Compile Include="Assets\Scripts\BuildButton.cs" />
     <Compile Include="Assets\Scripts\Buttons.cs" />
-    <Compile Include="Assets\Scripts\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\GameControl\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\GameControl\LevelManager0.cs" />
     <Compile Include="Assets\Scripts\GameControl\PlayerState.cs" />
     <Compile Include="Assets\Scripts\GameControl\StageManager.cs" />
     <Compile Include="Assets\Scripts\GameControl\UIManager.cs" />
     <Compile Include="Assets\Scripts\GameControl\ViewController.cs" />
+    <Compile Include="Assets\Scripts\Guider\Guider.cs" />
+    <Compile Include="Assets\Scripts\Guider\GuiderOnMap.cs" />
+    <Compile Include="Assets\Scripts\Guider\TipArrow.cs" />
     <Compile Include="Assets\Scripts\Interface\Selected.cs" />
     <Compile Include="Assets\Scripts\Laser.cs" />
     <Compile Include="Assets\Scripts\LightningChain.cs" />
@@ -662,6 +666,9 @@
     <Compile Include="Assets\Scripts\SubObject.cs" />
     <Compile Include="Assets\Scripts\TurretData.cs" />
     <Compile Include="Assets\Scripts\UI\FaceToCamera.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu\MainMenuFVX.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu\UI_BGImg.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu\UI_LoadingImg.cs" />
     <Compile Include="Assets\Scripts\UI\SkillButton.cs" />
     <Compile Include="Assets\Scripts\UI\SkillPanel.cs" />
     <Compile Include="Assets\Scripts\UI\UI\UI_endTurnButtonPanel.cs" />
@@ -681,7 +688,7 @@
     <Compile Include="Assets\Test_PlayerButtons.cs" />
     <Compile Include="Assets\Test_PlayerMove.cs" />
     <Compile Include="Assets\Test_StageText.cs" />
-    <Compile Include="Assets\TipArrow.cs" />
+    <Compile Include="Assets\UI_LoadingIcon.cs" />
     <None Include="Assets\Import Assets\UnityEffects\Assets\ShaderAndMat\Charactar.shader" />
     <None Include="Assets\Import Assets\QFramework\Framework\readme.txt" />
     <None Include="Assets\Import Assets\OutlineEffect\Resources\OutlineShader.shader" />

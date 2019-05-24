@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33112822530002908}
   - component: {fileID: 23042492320046784}
   - component: {fileID: 65366006628392532}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4034858794894512}
   - component: {fileID: 114838333811809908}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TipArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,4 +137,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea2db4d83e8c118479e0f382b2cdc539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}

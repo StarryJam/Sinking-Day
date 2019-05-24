@@ -31,5 +31,9 @@ namespace QFramework.EventID
             compeletStep = QMgrID.Game + 3,
         }
         
+        public enum Unit
+        {
+            enemyDie = QMgrID.Game + 4,
+        }
     }
 }

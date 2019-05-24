@@ -6,29 +6,29 @@ using UnityEditor;
 [CustomEditor(typeof(Skill))]
 public class SkillDisplayScript : Editor {
 
-    private SerializedObject test;
+    private SerializedObject ser;
     private SerializedProperty type, coolDown, damage, spellRange, influenceRange, isToEnemy, skillName, skillIcon, hasProjectile, Projectile, ProjectileSpeed;
 
     
     private void OnEnable()
     {
-        test = new SerializedObject(target);
-        skillName = test.FindProperty("skillName");
-        skillIcon = test.FindProperty("skillIcon");
-        type = test.FindProperty("type");
-        coolDown = test.FindProperty("coolDown");
-        damage = test.FindProperty("damage");
-        spellRange = test.FindProperty("spellRange");
-        influenceRange = test.FindProperty("influenceRange");
-        isToEnemy = test.FindProperty("isToEnemy");
-        hasProjectile = test.FindProperty("hasProjectile");
-        Projectile = test.FindProperty("Projectile");
-        ProjectileSpeed = test.FindProperty("ProjectileSpeed");
+        ser = new SerializedObject(target);
+        skillName = ser.FindProperty("skillName");
+        skillIcon = ser.FindProperty("skillIcon");
+        type = ser.FindProperty("type");
+        coolDown = ser.FindProperty("coolDown");
+        damage = ser.FindProperty("damage");
+        spellRange = ser.FindProperty("spellRange");
+        influenceRange = ser.FindProperty("influenceRange");
+        isToEnemy = ser.FindProperty("isToEnemy");
+        hasProjectile = ser.FindProperty("hasProjectile");
+        Projectile = ser.FindProperty("Projectile");
+        ProjectileSpeed = ser.FindProperty("ProjectileSpeed");
     }
 
     public override void OnInspectorGUI()
     {
-        test.Update();
+        ser.Update();
         EditorGUILayout.PropertyField(skillName);
         EditorGUILayout.PropertyField(skillIcon);
         EditorGUILayout.PropertyField(type);
@@ -57,6 +57,6 @@ public class SkillDisplayScript : Editor {
             }
         }
         
-        test.ApplyModifiedProperties();
+        ser.ApplyModifiedProperties();
     }
 }

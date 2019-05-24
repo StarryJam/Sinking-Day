@@ -1,19 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using QFramework;
+using QFramework.EventID;
 
 public class UnitOfPlyer : Unit, Selectee {
 
     private int needAP;
+    [HideInInspector] public RangeCursor rangeCursorPos;
 
     new public void Awake()
     {
         base.Awake();
         gameObject.tag = "UnitOfPlayer";
+        QEventSystem.RegisterEvent(GameEventID.Unit.enemyDie, GainExp);
     }
 
     new void Start() {
         base.Start();
+
+        rangeCursorPos = transform.Find("RangeCursorPos").GetComponent<RangeCursor>();
     }
 
 
@@ -70,7 +76,7 @@ public class UnitOfPlyer : Unit, Selectee {
         map.ClearPath();
         ReadyToUseAP(0);
         PointerEvent.ChangingPointerState(PointerEvent.PointerState.normal);
-        UIManager.HideUI(rangeCursorUI);
+        rangeCursorPos.Cancel();
     }
 
     public void CancelAction()
@@ -84,19 +90,26 @@ public class UnitOfPlyer : Unit, Selectee {
         {
             StartCoroutine(Move());
             UsingAP();
+            RemainHolding();
         }
         else if (state == UnitState.readyToAttack && PointerEvent.isOnEnemy)
         {
-            Attack(PointerEvent.pointerOnObj.GetComponent<Unit>());
-            Debug.Log(1);
-            UsingAP();
+            if (rangeCursorPos.unitsInRange.Contains(PointerEvent.pointerOnObj))
+            {
+                Attack(PointerEvent.pointerOnObj.GetComponent<Unit>());
+                RemainHolding();
+                UsingAP();
+            }
         }
         else if (state == UnitState.readyToSpell && PointerEvent.isOnUnit)
         {
-            SpellSkill();
-            UsingAP();
+            if (rangeCursorPos.unitsInRange.Contains(PointerEvent.pointerOnObj))
+            {
+                SpellSkill();
+                RemainHolding();
+                UsingAP();
+            }
         }
-        RemainHolding();
     }
 
     private void ControlAndAct()
@@ -138,9 +151,7 @@ public class UnitOfPlyer : Unit, Selectee {
 
     public void CheakRange(int range)
     {
-        int rangeValue = range * 2 + 1;
-        rangeCursorUI.transform.localScale = new Vector3(rangeValue, rangeValue, rangeValue);
-        UIManager.DisplayUI(rangeCursorUI);
+        rangeCursorPos.CheckRange(range);
     }
 
     public void Cancel()
@@ -152,6 +163,15 @@ public class UnitOfPlyer : Unit, Selectee {
         else
             DeSelected();
     }
-    
-    
+
+    private void GainExp(int key, params object[] param)
+    {
+        exp += (int)param[0];
+        if (exp >= expNeedForLUP)
+        {
+            exp -= expNeedForLUP;
+            LevelUp();
+        }
+    }
+
 }

@@ -13,6 +13,7 @@ TagManager:
   - UnitOfPlayer
   - MainCanvas
   - UI_PopInfo
+  - LevelManager
   layers:
   - Default
   - TransparentFX

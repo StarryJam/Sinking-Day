@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using cakeslice;
+using QFramework;
+using QFramework.EventID;
 
 public class Unit : MonoBasedOnTurn,Selectee  {
 
     public Grid map;
 
     /*---------基础属性----------*/
+    public int level = 1;
     public float maxHealth = 100;
     public float currentHealth;
     public int attackRange = 5;
@@ -16,6 +19,10 @@ public class Unit : MonoBasedOnTurn,Selectee  {
     public int moveRange = 5;
     public int maxActionPoint = 3;
     public int currentActionPoint;
+    public int expNeedForLUP = 50;
+    public int exp = 0;
+
+    public int expGain = 10;//玩家杀死该单位获得的经验
 
     public float speed = 10;//在地图上的移动速度
     /*---------基础属性----------*/
@@ -29,11 +36,12 @@ public class Unit : MonoBasedOnTurn,Selectee  {
     protected Skill currentSkill;
     /*-----------技能------------*/
 
-        
+    /*-----------特效------------*/
+    private GameObject levelUpFVX;
+    /*-----------特效------------*/
+
     [HideInInspector] public Canvas stateHudUI;
-    [HideInInspector] public Canvas rangeCursorUI;
     [HideInInspector] public Transform statementUIPos;
-    [HideInInspector] public Transform rangeCursorPos;
     [HideInInspector] public Transform projectilePos;
 
     protected bool isMoving = false;
@@ -49,12 +57,9 @@ public class Unit : MonoBasedOnTurn,Selectee  {
     {
         //UI初始化
         statementUIPos = transform.Find("StatementUIPos");
-        rangeCursorPos = transform.Find("RangeCursorPos");
         projectilePos = transform.Find("ProjectilePos");
         stateHudUI = UIManager.CreateUI(UIManager.ui_UnitStateHud, statementUIPos);
         stateHudUI.GetComponent<UnitStateUI>().unit = this;
-        rangeCursorUI = UIManager.CreateUI(UIManager.ui_RangeCursorOnUnit, rangeCursorPos);
-        UIManager.HideUI(rangeCursorUI);
 
         //技能初始化
         normalAttack = ((GameObject)Instantiate(Resources.Load("Prefebs/Skills/NormalAttack/NormalAttack_Skill"),transform)).GetComponent<Skill>();
@@ -64,12 +69,16 @@ public class Unit : MonoBasedOnTurn,Selectee  {
             skills[i] = Instantiate(skills[i], transform);
         }
 
+        //特效初始化
+        levelUpFVX = (GameObject)Resources.Load("Prefebs/Effect/LevelUpFVX");
+
         //属性初始化
         currentHealth = maxHealth;
         state = UnitState.holding;
         currentActionPoint = maxActionPoint;
 
         map = Grid.map;
+        
     }
 
     public enum Camp //阵营
@@ -190,7 +199,6 @@ public class Unit : MonoBasedOnTurn,Selectee  {
     }
 
 
-
     public void Attack(Unit unit)
     {
         normalAttack.Spell(unit);
@@ -216,6 +224,13 @@ public class Unit : MonoBasedOnTurn,Selectee  {
         }
     }
 
+    public void LevelUp()
+    {
+        level++;
+        SkillPoint++;
+        Instantiate(levelUpFVX, transform);
+    }
+
     public override void AtTurnStart()
     {
         currentActionPoint = maxActionPoint;
@@ -232,6 +247,10 @@ public class Unit : MonoBasedOnTurn,Selectee  {
     private void Die()
     {
         Destroy(gameObject);
+        if (camp == Camp.enemy)
+        {
+            QEventSystem.SendEvent(GameEventID.Unit.enemyDie, expGain);
+        }
     }
 
     public bool IsTargetInRange(Unit target, int range)

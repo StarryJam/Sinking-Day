@@ -86,10 +86,7 @@ public class Grid : MonoBehaviour {
             if (!walkable)
             {
                 node.state = Node.NodeState.unwalkable;
-                node.mapCube.cube.GetComponent<MeshRenderer>().material = node.mapCube.material_Unwalkable;
             }
-            else
-            {
                 if (isShowPath)
                 {
                     if (path.Contains(node))
@@ -102,8 +99,11 @@ public class Grid : MonoBehaviour {
                         node.state = Node.NodeState.inMoveRange;
                         node.mapCube.cube.GetComponent<MeshRenderer>().material = node.mapCube.material_InMoveRange;
                     }
+                    if (node.state == Node.NodeState.unwalkable)
+                    {
+                        node.mapCube.cube.GetComponent<MeshRenderer>().material = node.mapCube.material_Unwalkable;
+                    }
                 }
-            }
 
         }
     }

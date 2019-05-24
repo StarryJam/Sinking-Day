@@ -9,6 +9,7 @@ public class UI_PopInfo : MonoBehaviour {
 
     public void SetText(string _text)
     {
-        text.text = _text;
+        text.text = _text.Replace("\\n", "\n"); ;
+        
     }
 }
