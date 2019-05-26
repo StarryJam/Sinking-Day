@@ -16,21 +16,21 @@ public class MainMenuFVX : MonoBehaviour {
     public List<MainMenuLayer> layers;
     Vector2 mousePosition;
     Vector2 mouseOffset;
-    public GameObject menu;
+    public List<GameObject> menus;
     public float menuRotate;
 
     private Vector3[,] objPos = new Vector3[10, 10];
-    private Quaternion menuRotation;
+    private Quaternion[] menuRotation = new Quaternion[10];
 
     private void Start()
     {
         defaultPointer = (Texture2D)Resources.Load("Image/Pointer/Pointer");
         Cursor.SetCursor(defaultPointer, Vector2.zero, CursorMode.Auto);
-        if (menu != null)
+        for (int i = 0; i < menus.Count; i++)
         {
-            menuRotation = menu.transform.rotation;
+            menuRotation[i] = menus[i].transform.rotation;
         }
-        for(int i = 0; i < layers.Count; i++)
+        for (int i = 0; i < layers.Count; i++)
         {
             for(int j = 0; j < layers[i].Objs.Count; j++)
             {
@@ -43,10 +43,10 @@ public class MainMenuFVX : MonoBehaviour {
     {
         mousePosition = Input.mousePosition;
         mouseOffset = mousePosition - new Vector2(Screen.width / 2, Screen.height / 2);
-        if (menu != null)
+        for (int i = 0; i < menus.Count; i++)
         {
-            menu.transform.rotation = menuRotation;
-            menu.transform.Rotate(mouseOffset.y * menuRotate, mouseOffset.x * menuRotate, 0);
+            menus[i].transform.rotation = menuRotation[i];
+            menus[i].transform.Rotate(mouseOffset.y * menuRotate, mouseOffset.x * menuRotate, 0);
         }
         for (int i = 0; i < layers.Count; i++)
         {

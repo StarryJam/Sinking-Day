@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour {
-    public LevelManager0 LM;
     private AsyncOperation async = null;
     public Text loadText;
     public GameObject loadIcon;
@@ -14,7 +13,6 @@ public class Loader : MonoBehaviour {
     // Use this for initialization
     void Start () {
         loadText.gameObject.SetActive(false);
-        LM = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager0>();
         StartCoroutine(LoadScene());
 	}
 
@@ -26,7 +24,7 @@ public class Loader : MonoBehaviour {
 
     public IEnumerator LoadScene()
     {
-        async = SceneManager.LoadSceneAsync(LM.nextSceneName);
+        async = SceneManager.LoadSceneAsync(LevelManager0.nextSceneName);
         async.allowSceneActivation = false;
         while (!async.isDone)
         {
