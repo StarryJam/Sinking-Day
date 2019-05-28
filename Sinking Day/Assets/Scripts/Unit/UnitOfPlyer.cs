@@ -48,6 +48,7 @@ public class UnitOfPlyer : Unit, Selectee {
         PointerEvent.ChangingPointerState(PointerEvent.PointerState.choosingTarget);
         ChangeState(UnitState.readyToAttack);
         CheakRange(attackRange);
+        animator.SetTrigger("Aim");
     }
 
     public void ReadyToSpell(Skill skill)
@@ -56,6 +57,7 @@ public class UnitOfPlyer : Unit, Selectee {
         PointerEvent.ChangingPointerState(PointerEvent.PointerState.choosingTarget);
         ChangeState(UnitState.readyToSpell);
         CheakRange(skill.spellRange);
+        animator.SetTrigger("Aim");
     }
 
     private void ReadyToUseAP(int point)
@@ -69,11 +71,9 @@ public class UnitOfPlyer : Unit, Selectee {
         currentActionPoint -= needAP;
     }
 
-    public void RemainHolding()
+    new public void RemainHolding()
     {
-        ChangeState(UnitState.holding);
-        currentSkill = null;
-        map.ClearPath();
+        base.RemainHolding();
         ReadyToUseAP(0);
         PointerEvent.ChangingPointerState(PointerEvent.PointerState.normal);
         rangeCursorPos.Cancel();
@@ -96,7 +96,7 @@ public class UnitOfPlyer : Unit, Selectee {
         {
             if (rangeCursorPos.unitsInRange.Contains(PointerEvent.pointerOnObj))
             {
-                Attack(PointerEvent.pointerOnObj.GetComponent<Unit>());
+                StartCoroutine(Attack(PointerEvent.pointerOnObj.GetComponent<Unit>()));
                 RemainHolding();
                 UsingAP();
             }
@@ -105,7 +105,7 @@ public class UnitOfPlyer : Unit, Selectee {
         {
             if (rangeCursorPos.unitsInRange.Contains(PointerEvent.pointerOnObj))
             {
-                SpellSkill();
+                StartCoroutine(SpellSkill());
                 RemainHolding();
                 UsingAP();
             }
@@ -127,6 +127,13 @@ public class UnitOfPlyer : Unit, Selectee {
             else
             {
                 map.UndisplayPath();
+            }
+            if(state == UnitState.readyToAttack || state == UnitState.readyToSpell)
+            {
+                if (PointerEvent.isOnUnit)
+                {
+                    StartCoroutine(Turning(PointerEvent.pointerOnObj.transform.position));
+                }
             }
         }
     }
@@ -159,6 +166,7 @@ public class UnitOfPlyer : Unit, Selectee {
         if (state == UnitState.readyToAttack || state == UnitState.readyToMove || state == UnitState.readyToSpell)
         {
             CancelAction();
+            animator.SetTrigger("Hold");
         }
         else
             DeSelected();

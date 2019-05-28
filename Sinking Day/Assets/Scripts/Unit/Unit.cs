@@ -9,6 +9,8 @@ using QFramework.EventID;
 public class Unit : MonoBasedOnTurn,Selectee  {
 
     public Grid map;
+    
+    public Transform hitPos;
 
     /*---------基础属性----------*/
     public int level = 1;
@@ -24,7 +26,8 @@ public class Unit : MonoBasedOnTurn,Selectee  {
 
     public int expGain = 10;//玩家杀死该单位获得的经验
 
-    public float speed = 10;//在地图上的移动速度
+    public float speed = 6;//在地图上的移动速度
+    public float rotateSpeed = 1;//转身速度
     /*---------基础属性----------*/
 
 
@@ -42,9 +45,10 @@ public class Unit : MonoBasedOnTurn,Selectee  {
 
     [HideInInspector] public Canvas stateHudUI;
     [HideInInspector] public Transform statementUIPos;
-    [HideInInspector] public Transform projectilePos;
+    public Transform projectilePos;
 
-    protected bool isMoving = false;
+    protected GameObject model;
+    protected Animator animator;
     public UnitState state;
     public Camp camp;
 
@@ -57,7 +61,6 @@ public class Unit : MonoBasedOnTurn,Selectee  {
     {
         //UI初始化
         statementUIPos = transform.Find("StatementUIPos");
-        projectilePos = transform.Find("ProjectilePos");
         stateHudUI = UIManager.CreateUI(UIManager.ui_UnitStateHud, statementUIPos);
         stateHudUI.GetComponent<UnitStateUI>().unit = this;
 
@@ -77,8 +80,11 @@ public class Unit : MonoBasedOnTurn,Selectee  {
         state = UnitState.holding;
         currentActionPoint = maxActionPoint;
 
+        model = transform.Find("Model").gameObject;
+        animator = model.GetComponent<Animator>();
         map = Grid.map;
-        
+        hitPos= transform.Find("HitPos");
+
     }
 
     public enum Camp //阵营
@@ -92,7 +98,8 @@ public class Unit : MonoBasedOnTurn,Selectee  {
         holding,
         readyToMove,
         readyToAttack,
-        readyToSpell
+        readyToSpell,
+        moving
     }
 
     public void ChangeState(UnitState _state)
@@ -103,9 +110,10 @@ public class Unit : MonoBasedOnTurn,Selectee  {
     public void BeSelected()
     {
         PointerEvent.selected = gameObject;
-        for(int i = 0; i < transform.childCount; i++)
+        foreach (Transform child in transform.GetComponentsInChildren<Transform>(true))
         {
-            transform.GetChild(i).gameObject.AddComponent<Outline>();
+            if (child.GetComponent<Renderer>() != null)
+                child.gameObject.AddComponent<Outline>();
         }
         if (GetComponent<UnitOfPlyer>() != null)
         {
@@ -117,9 +125,10 @@ public class Unit : MonoBasedOnTurn,Selectee  {
     {
         PointerEvent.selected = null;
         ChangeState(UnitState.holding);
-        for (int i = 0; i < transform.childCount; i++)
+        foreach (Transform child in transform.GetComponentsInChildren<Transform>(true))
         {
-            Destroy(transform.GetChild(i).gameObject.GetComponent<Outline>());
+            if (child.GetComponent<Outline>() != null)
+                Destroy(child.gameObject.GetComponent<Outline>());
         }
         UIManager.HideSelectInformation();
     }
@@ -151,63 +160,93 @@ public class Unit : MonoBasedOnTurn,Selectee  {
         map.FindPath(transform.position, PointerEvent.pointerOnObj.transform.position);
     }
 
-
+    public void RemainHolding()
+    {
+        ChangeState(UnitState.holding);
+        currentSkill = null;
+        map.ClearPath();
+    }
 
     public IEnumerator Move()
     {
+        ChangeState(UnitState.moving);
         yield return StartCoroutine(MovePath(map.path));
-        state = UnitState.holding;
+        RemainHolding();
+        animator.SetTrigger("Hold");
         map.path.Clear();
     }
 
-    IEnumerator MovePath(List<Node> _path)
+     IEnumerator MovePath(List<Node> _path)
     {
-        List<Node> path = new List<Node>();
-        for(int i = 0; i < _path.Count; i++)
+        if (_path.Count != 0)
         {
-            path.Add(_path[i]);
-        }
-        isMoving = true;
-        if (path.Count > 0)
-        {
-            for (int i = 0; i < path.Count; i++)
+            animator.SetTrigger("Run");
+            List<Node> path = new List<Node>();
+            for (int i = 0; i < _path.Count; i++)
             {
-                yield return StartCoroutine(MoveAStep(path[i]._worldPos));
+                path.Add(_path[i]);
+            }
+            if (path.Count > 0)
+            {
+                for (int i = 0; i < path.Count; i++)
+                {
+                    yield return StartCoroutine(MoveAStep(path[i]._worldPos));
+                }
             }
         }
-        isMoving = false;
     }
 
     IEnumerator MoveAStep(Vector3 toPositon)
     {
-        isMoving = true;
         float schedule = 0;//动画插值
         Vector3 from = transform.position;
         Vector3 to = toPositon;
         float time = Vector3.Distance(from, to) / speed;
         float scheduleSpeed = 1 / time;
+        StartCoroutine(Turning(toPositon));
         while (schedule < 1)
         {
             schedule += Time.deltaTime * scheduleSpeed;
-            if (schedule > 1)
-                schedule = 1;
+            //if (schedule > 1)
+            //    schedule = 1;
 
             transform.position = Vector3.Lerp(from, to, schedule);
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
-        isMoving = false;
+    }
+
+    protected IEnumerator Turning(Vector3 target)
+    {
+        float schedule = 0;//动画插值
+        Quaternion current_Quaternion = transform.rotation;
+        transform.LookAt(target);
+        Quaternion targt_Quaternion = transform.rotation;
+        transform.rotation = current_Quaternion;
+        while (schedule <= 1)
+        {
+            schedule += Time.deltaTime * rotateSpeed * 5;
+            transform.rotation = Quaternion.Lerp(current_Quaternion, targt_Quaternion, schedule);
+            yield return null;
+        }
     }
 
 
-    public void Attack(Unit unit)
+    public IEnumerator Attack(Unit unit)
     {
+        yield return StartCoroutine(Turning(unit.transform.position));
         normalAttack.Spell(unit);
+        animator.SetTrigger("Shoot");
+        yield return new WaitForSeconds(0.5f);
     }
     
-    public void SpellSkill()
+    public IEnumerator SpellSkill()
     {
         if (currentSkill.type == Skill.SkillType.toUnit)
             currentSkill.Spell(PointerEvent.pointerOnObj.GetComponent<Unit>());
+        yield return StartCoroutine(Turning(PointerEvent.pointerOnObj.transform.position));
+        animator.SetTrigger("Shoot");
+        StartCoroutine(Turning(PointerEvent.pointerOnObj.transform.position));
+        yield return new WaitForSeconds(0.5f);
     }
 
     public void takeDamage(float damage)
@@ -244,13 +283,16 @@ public class Unit : MonoBasedOnTurn,Selectee  {
 
     }
 
-    private void Die()
+    protected virtual void Die()
     {
-        Destroy(gameObject);
+        DeSelected();
+        Animator dieAni = Instantiate(model, model.transform.position, transform.rotation).GetComponent<Animator>();
+        dieAni.SetTrigger("Die");
         if (camp == Camp.enemy)
         {
             QEventSystem.SendEvent(GameEventID.Unit.enemyDie, expGain);
         }
+        Destroy(gameObject);
     }
 
     public bool IsTargetInRange(Unit target, int range)

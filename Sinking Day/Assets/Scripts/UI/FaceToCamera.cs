@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class FaceToCamera : MonoBehaviour {
 
-    private GameObject camera;
+    private GameObject mainCamera;
 
 	// Use this for initialization
 	void Start () {
-        camera = Camera.main.gameObject;
+        mainCamera = Camera.main.gameObject;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        transform.rotation=camera.transform.rotation;
+	void LateUpdate () {
+        transform.rotation=mainCamera.transform.rotation;
 	}
 }

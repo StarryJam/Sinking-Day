@@ -55,13 +55,12 @@ MonoBehaviour:
   skillIcon: {fileID: 21300000, guid: 7193f2421c12169419d2129fa1f6b9bc, type: 3}
   type: 1
   coolDown: 2
-  damage: 10
-  spellRange: 10
+  damage: 100
+  spellRange: 15
   influenceRange: 5
   isToEnemy: 1
   hasProjectile: 1
-  Projectile: {fileID: 114303866260162198, guid: 877969433dcae6648b47e1cd1fc5e689,
+  Projectile: {fileID: 114291851804292040, guid: 45f134f709433794c9fd82ae5c0d5009,
     type: 2}
-  ProjectileSpeed: 20
   target: {fileID: 0}
   restCooldown: 0

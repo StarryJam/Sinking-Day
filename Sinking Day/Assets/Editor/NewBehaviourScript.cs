@@ -7,7 +7,7 @@ using UnityEditor;
 public class SkillDisplayScript : Editor {
 
     private SerializedObject ser;
-    private SerializedProperty type, coolDown, damage, spellRange, influenceRange, isToEnemy, skillName, skillIcon, hasProjectile, Projectile, ProjectileSpeed;
+    private SerializedProperty type, coolDown, damage, spellRange, influenceRange, isToEnemy, skillName, skillIcon, hasProjectile, Projectile;
 
     
     private void OnEnable()
@@ -23,7 +23,6 @@ public class SkillDisplayScript : Editor {
         isToEnemy = ser.FindProperty("isToEnemy");
         hasProjectile = ser.FindProperty("hasProjectile");
         Projectile = ser.FindProperty("Projectile");
-        ProjectileSpeed = ser.FindProperty("ProjectileSpeed");
     }
 
     public override void OnInspectorGUI()
@@ -53,7 +52,6 @@ public class SkillDisplayScript : Editor {
             if (hasProjectile.boolValue)
             {
                 EditorGUILayout.PropertyField(Projectile);
-                EditorGUILayout.PropertyField(ProjectileSpeed);
             }
         }
         

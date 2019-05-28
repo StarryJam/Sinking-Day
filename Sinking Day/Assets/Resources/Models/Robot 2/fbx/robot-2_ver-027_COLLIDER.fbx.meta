@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 5a400e47abce74a45b7619490ad52d72
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: body_COLL
+    100002: gun_COLL
+    100004: head_COLL
+    100006: laser-gun_COLL
+    100008: LegBake-1.L_COLL
+    100010: LegBake-1.R_COLL
+    100012: LegBake-3.L_COLL
+    100014: LegBake-3.R_COLL
+    100016: LegBake-4.L_COLL
+    100018: LegBake-4.R_COLL
+    100020: LegTop-1.L_COLL
+    100022: LegTop-1.R_COLL
+    100024: LegTop-3.L_COLL
+    100026: LegTop-3.R_COLL
+    100028: LegTop-4.L_COLL
+    100030: LegTop-4.R_COLL
+    100032: //RootNode
+    400000: body_COLL
+    400002: gun_COLL
+    400004: head_COLL
+    400006: laser-gun_COLL
+    400008: LegBake-1.L_COLL
+    400010: LegBake-1.R_COLL
+    400012: LegBake-3.L_COLL
+    400014: LegBake-3.R_COLL
+    400016: LegBake-4.L_COLL
+    400018: LegBake-4.R_COLL
+    400020: LegTop-1.L_COLL
+    400022: LegTop-1.R_COLL
+    400024: LegTop-3.L_COLL
+    400026: LegTop-3.R_COLL
+    400028: LegTop-4.L_COLL
+    400030: LegTop-4.R_COLL
+    400032: //RootNode
+    2100000: No Name
+    2300000: body_COLL
+    2300002: gun_COLL
+    2300004: head_COLL
+    2300006: laser-gun_COLL
+    2300008: LegBake-1.L_COLL
+    2300010: LegBake-1.R_COLL
+    2300012: LegBake-3.L_COLL
+    2300014: LegBake-3.R_COLL
+    2300016: LegBake-4.L_COLL
+    2300018: LegBake-4.R_COLL
+    2300020: LegTop-1.L_COLL
+    2300022: LegTop-1.R_COLL
+    2300024: LegTop-3.L_COLL
+    2300026: LegTop-3.R_COLL
+    2300028: LegTop-4.L_COLL
+    2300030: LegTop-4.R_COLL
+    3300000: body_COLL
+    3300002: gun_COLL
+    3300004: head_COLL
+    3300006: laser-gun_COLL
+    3300008: LegBake-1.L_COLL
+    3300010: LegBake-1.R_COLL
+    3300012: LegBake-3.L_COLL
+    3300014: LegBake-3.R_COLL
+    3300016: LegBake-4.L_COLL
+    3300018: LegBake-4.R_COLL
+    3300020: LegTop-1.L_COLL
+    3300022: LegTop-1.R_COLL
+    3300024: LegTop-3.L_COLL
+    3300026: LegTop-3.R_COLL
+    3300028: LegTop-4.L_COLL
+    3300030: LegTop-4.R_COLL
+    4300000: LegBake-3.R_COLL
+    4300002: LegBake-1.R_COLL
+    4300004: LegTop-4.R_COLL
+    4300006: LegTop-3.R_COLL
+    4300008: LegTop-1.R_COLL
+    4300010: LegBake-4.L_COLL
+    4300012: LegBake-3.L_COLL
+    4300014: LegBake-1.L_COLL
+    4300016: LegTop-4.L_COLL
+    4300018: LegTop-3.L_COLL
+    4300020: LegTop-1.L_COLL
+    4300022: LegBake-4.R_COLL
+    4300024: laser-gun_COLL
+    4300026: gun_COLL
+    4300028: head_COLL
+    4300030: body_COLL
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

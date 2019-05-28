@@ -1,0 +1,1589 @@
+fileFormatVersion: 2
+guid: eb6a184d97a0ac54baca0d996ed80ba8
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: car101_obj
+    100004: Component_10_1
+    100006: Component_11_1
+    100008: Component_12_1
+    100010: Component_13_1
+    100012: Component_14_1
+    100014: Component_15_1
+    100016: Component_16_1
+    100018: Component_17_1
+    100020: Component_17_2
+    100022: Component_18_1
+    100024: Component_1_1
+    100026: Component_2_1
+    100028: Component_3_1
+    100030: Component_4_1
+    100032: Component_5_1
+    100034: Component_6_1
+    100036: Component_7_1
+    100038: Component_8_1
+    100040: Component_9_1
+    100042: dragon
+    100044: Group1
+    100046: Group10
+    100048: Group100
+    100050: Group101
+    100052: Group102
+    100054: Group103
+    100056: Group11
+    100058: Group12
+    100060: Group13
+    100062: Group14
+    100064: Group15
+    100066: Group16
+    100068: Group17
+    100070: Group18
+    100072: Group19
+    100074: Group2
+    100076: Group20
+    100078: Group21
+    100080: Group22
+    100082: Group23
+    100084: Group24
+    100086: Group25
+    100088: Group26
+    100090: Group27
+    100092: Group28
+    100094: Group29
+    100096: Group3
+    100098: Group30
+    100100: Group31
+    100102: Group32
+    100104: Group33
+    100106: Group34
+    100108: Group35
+    100110: Group36
+    100112: Group37
+    100114: Group38
+    100116: Group39
+    100118: Group4
+    100120: Group40
+    100122: Group41
+    100124: Group42
+    100126: Group43
+    100128: Group44
+    100130: Group45
+    100132: Group46
+    100134: Group47
+    100136: Group48
+    100138: Group49
+    100140: Group5
+    100142: Group50
+    100144: Group51
+    100146: Group52
+    100148: Group53
+    100150: Group54
+    100152: Group55
+    100154: Group56
+    100156: Group57
+    100158: Group58
+    100160: Group59
+    100162: Group6
+    100164: Group60
+    100166: Group61
+    100168: Group62
+    100170: Group63
+    100172: Group64
+    100174: Group65
+    100176: Group66
+    100178: Group67
+    100180: Group68
+    100182: Group69
+    100184: Group7
+    100186: Group70
+    100188: Group71
+    100190: Group72
+    100192: Group73
+    100194: Group74
+    100196: Group75
+    100198: Group76
+    100200: Group77
+    100202: Group78
+    100204: Group79
+    100206: Group8
+    100208: Group80
+    100210: Group81
+    100212: Group82
+    100214: Group83
+    100216: Group84
+    100218: Group85
+    100220: Group86
+    100222: Group87
+    100224: Group88
+    100226: Group89
+    100228: Group9
+    100230: Group90
+    100232: Group91
+    100234: Group92
+    100236: Group93
+    100238: Group94
+    100240: Group95
+    100242: Group96
+    100244: Group97
+    100246: Group98
+    100248: Group99
+    100250: Mesh1
+    100252: Mesh10
+    100254: Mesh100
+    100256: Mesh101
+    100258: Mesh102
+    100260: Mesh103
+    100262: Mesh104
+    100264: Mesh105
+    100266: Mesh106
+    100268: Mesh107
+    100270: Mesh108
+    100272: Mesh109
+    100274: Mesh11
+    100276: Mesh110
+    100278: Mesh111
+    100280: Mesh112
+    100282: Mesh113
+    100284: Mesh114
+    100286: Mesh115
+    100288: Mesh116
+    100290: Mesh117
+    100292: Mesh118
+    100294: Mesh119
+    100296: Mesh12
+    100298: Mesh120
+    100300: Mesh121
+    100302: Mesh122
+    100304: Mesh123
+    100306: Mesh124
+    100308: Mesh13
+    100310: Mesh14
+    100312: Mesh15
+    100314: Mesh16
+    100316: Mesh17
+    100318: Mesh18
+    100320: Mesh19
+    100322: Mesh2
+    100324: Mesh20
+    100326: Mesh21
+    100328: Mesh22
+    100330: Mesh23
+    100332: Mesh24
+    100334: Mesh25
+    100336: Mesh26
+    100338: Mesh27
+    100340: Mesh28
+    100342: Mesh29
+    100344: Mesh3
+    100346: Mesh30
+    100348: Mesh31
+    100350: Mesh32
+    100352: Mesh33
+    100354: Mesh34
+    100356: Mesh35
+    100358: Mesh36
+    100360: Mesh37
+    100362: Mesh38
+    100364: Mesh39
+    100366: Mesh4
+    100368: Mesh40
+    100370: Mesh41
+    100372: Mesh42
+    100374: Mesh43
+    100376: Mesh44
+    100378: Mesh45
+    100380: Mesh46
+    100382: Mesh47
+    100384: Mesh48
+    100386: Mesh49
+    100388: Mesh5
+    100390: Mesh50
+    100392: Mesh51
+    100394: Mesh52
+    100396: Mesh53
+    100398: Mesh54
+    100400: Mesh55
+    100402: Mesh56
+    100404: Mesh57
+    100406: Mesh58
+    100408: Mesh59
+    100410: Mesh6
+    100412: Mesh60
+    100414: Mesh61
+    100416: Mesh62
+    100418: Mesh63
+    100420: Mesh64
+    100422: Mesh65
+    100424: Mesh66
+    100426: Mesh67
+    100428: Mesh68
+    100430: Mesh69
+    100432: Mesh7
+    100434: Mesh70
+    100436: Mesh71
+    100438: Mesh72
+    100440: Mesh73
+    100442: Mesh74
+    100444: Mesh75
+    100446: Mesh76
+    100448: Mesh77
+    100450: Mesh78
+    100452: Mesh79
+    100454: Mesh8
+    100456: Mesh80
+    100458: Mesh81
+    100460: Mesh82
+    100462: Mesh83
+    100464: Mesh84
+    100466: Mesh85
+    100468: Mesh86
+    100470: Mesh87
+    100472: Mesh88
+    100474: Mesh89
+    100476: Mesh9
+    100478: Mesh90
+    100480: Mesh91
+    100482: Mesh92
+    100484: Mesh93
+    100486: Mesh94
+    100488: Mesh95
+    100490: Mesh96
+    100492: Mesh97
+    100494: Mesh98
+    100496: Mesh99
+    100498: p3dm_ru_dragon_obj
+    100500: SMDImport
+    100502: SMDImport001
+    100504: SMDImport003
+    100506: stim2backup_obj
+    100508: Stim_Untitled_033
+    100510: TomGroup_0
+    100512: TomGroup_0_1
+    100514: TomGroup_1
+    100516: TomGroup_1_1
+    100518: TomGroup_2
+    100520: TomGroup_2_1
+    100522: TomGroup_3
+    100524: TomGroup_3_1
+    100526: TomGroup_4
+    100528: TomGroup_4_1
+    100530: viewmodel_concussion_grenade_iw6_LOD_0_obj1
+    100532: viewmodel_concussion_grenade_iw6_LOD_0_obj2
+    400000: //RootNode
+    400002: car101_obj
+    400004: Component_10_1
+    400006: Component_11_1
+    400008: Component_12_1
+    400010: Component_13_1
+    400012: Component_14_1
+    400014: Component_15_1
+    400016: Component_16_1
+    400018: Component_17_1
+    400020: Component_17_2
+    400022: Component_18_1
+    400024: Component_1_1
+    400026: Component_2_1
+    400028: Component_3_1
+    400030: Component_4_1
+    400032: Component_5_1
+    400034: Component_6_1
+    400036: Component_7_1
+    400038: Component_8_1
+    400040: Component_9_1
+    400042: dragon
+    400044: Group1
+    400046: Group10
+    400048: Group100
+    400050: Group101
+    400052: Group102
+    400054: Group103
+    400056: Group11
+    400058: Group12
+    400060: Group13
+    400062: Group14
+    400064: Group15
+    400066: Group16
+    400068: Group17
+    400070: Group18
+    400072: Group19
+    400074: Group2
+    400076: Group20
+    400078: Group21
+    400080: Group22
+    400082: Group23
+    400084: Group24
+    400086: Group25
+    400088: Group26
+    400090: Group27
+    400092: Group28
+    400094: Group29
+    400096: Group3
+    400098: Group30
+    400100: Group31
+    400102: Group32
+    400104: Group33
+    400106: Group34
+    400108: Group35
+    400110: Group36
+    400112: Group37
+    400114: Group38
+    400116: Group39
+    400118: Group4
+    400120: Group40
+    400122: Group41
+    400124: Group42
+    400126: Group43
+    400128: Group44
+    400130: Group45
+    400132: Group46
+    400134: Group47
+    400136: Group48
+    400138: Group49
+    400140: Group5
+    400142: Group50
+    400144: Group51
+    400146: Group52
+    400148: Group53
+    400150: Group54
+    400152: Group55
+    400154: Group56
+    400156: Group57
+    400158: Group58
+    400160: Group59
+    400162: Group6
+    400164: Group60
+    400166: Group61
+    400168: Group62
+    400170: Group63
+    400172: Group64
+    400174: Group65
+    400176: Group66
+    400178: Group67
+    400180: Group68
+    400182: Group69
+    400184: Group7
+    400186: Group70
+    400188: Group71
+    400190: Group72
+    400192: Group73
+    400194: Group74
+    400196: Group75
+    400198: Group76
+    400200: Group77
+    400202: Group78
+    400204: Group79
+    400206: Group8
+    400208: Group80
+    400210: Group81
+    400212: Group82
+    400214: Group83
+    400216: Group84
+    400218: Group85
+    400220: Group86
+    400222: Group87
+    400224: Group88
+    400226: Group89
+    400228: Group9
+    400230: Group90
+    400232: Group91
+    400234: Group92
+    400236: Group93
+    400238: Group94
+    400240: Group95
+    400242: Group96
+    400244: Group97
+    400246: Group98
+    400248: Group99
+    400250: Mesh1
+    400252: Mesh10
+    400254: Mesh100
+    400256: Mesh101
+    400258: Mesh102
+    400260: Mesh103
+    400262: Mesh104
+    400264: Mesh105
+    400266: Mesh106
+    400268: Mesh107
+    400270: Mesh108
+    400272: Mesh109
+    400274: Mesh11
+    400276: Mesh110
+    400278: Mesh111
+    400280: Mesh112
+    400282: Mesh113
+    400284: Mesh114
+    400286: Mesh115
+    400288: Mesh116
+    400290: Mesh117
+    400292: Mesh118
+    400294: Mesh119
+    400296: Mesh12
+    400298: Mesh120
+    400300: Mesh121
+    400302: Mesh122
+    400304: Mesh123
+    400306: Mesh124
+    400308: Mesh13
+    400310: Mesh14
+    400312: Mesh15
+    400314: Mesh16
+    400316: Mesh17
+    400318: Mesh18
+    400320: Mesh19
+    400322: Mesh2
+    400324: Mesh20
+    400326: Mesh21
+    400328: Mesh22
+    400330: Mesh23
+    400332: Mesh24
+    400334: Mesh25
+    400336: Mesh26
+    400338: Mesh27
+    400340: Mesh28
+    400342: Mesh29
+    400344: Mesh3
+    400346: Mesh30
+    400348: Mesh31
+    400350: Mesh32
+    400352: Mesh33
+    400354: Mesh34
+    400356: Mesh35
+    400358: Mesh36
+    400360: Mesh37
+    400362: Mesh38
+    400364: Mesh39
+    400366: Mesh4
+    400368: Mesh40
+    400370: Mesh41
+    400372: Mesh42
+    400374: Mesh43
+    400376: Mesh44
+    400378: Mesh45
+    400380: Mesh46
+    400382: Mesh47
+    400384: Mesh48
+    400386: Mesh49
+    400388: Mesh5
+    400390: Mesh50
+    400392: Mesh51
+    400394: Mesh52
+    400396: Mesh53
+    400398: Mesh54
+    400400: Mesh55
+    400402: Mesh56
+    400404: Mesh57
+    400406: Mesh58
+    400408: Mesh59
+    400410: Mesh6
+    400412: Mesh60
+    400414: Mesh61
+    400416: Mesh62
+    400418: Mesh63
+    400420: Mesh64
+    400422: Mesh65
+    400424: Mesh66
+    400426: Mesh67
+    400428: Mesh68
+    400430: Mesh69
+    400432: Mesh7
+    400434: Mesh70
+    400436: Mesh71
+    400438: Mesh72
+    400440: Mesh73
+    400442: Mesh74
+    400444: Mesh75
+    400446: Mesh76
+    400448: Mesh77
+    400450: Mesh78
+    400452: Mesh79
+    400454: Mesh8
+    400456: Mesh80
+    400458: Mesh81
+    400460: Mesh82
+    400462: Mesh83
+    400464: Mesh84
+    400466: Mesh85
+    400468: Mesh86
+    400470: Mesh87
+    400472: Mesh88
+    400474: Mesh89
+    400476: Mesh9
+    400478: Mesh90
+    400480: Mesh91
+    400482: Mesh92
+    400484: Mesh93
+    400486: Mesh94
+    400488: Mesh95
+    400490: Mesh96
+    400492: Mesh97
+    400494: Mesh98
+    400496: Mesh99
+    400498: p3dm_ru_dragon_obj
+    400500: SMDImport
+    400502: SMDImport001
+    400504: SMDImport003
+    400506: stim2backup_obj
+    400508: Stim_Untitled_033
+    400510: TomGroup_0
+    400512: TomGroup_0_1
+    400514: TomGroup_1
+    400516: TomGroup_1_1
+    400518: TomGroup_2
+    400520: TomGroup_2_1
+    400522: TomGroup_3
+    400524: TomGroup_3_1
+    400526: TomGroup_4
+    400528: TomGroup_4_1
+    400530: viewmodel_concussion_grenade_iw6_LOD_0_obj1
+    400532: viewmodel_concussion_grenade_iw6_LOD_0_obj2
+    2100000: tb1
+    2100002: pl1
+    2100004: v1
+    2100006: v3
+    2100008: shoul1
+    2100010: strap3
+    2100012: leg_mat
+    2100014: chasmain
+    2100016: cf
+    2100018: sh1s
+    2100020: chas3
+    2100022: p2
+    2100024: p1
+    2100026: st1
+    2100028: chas2
+    2100030: chas1
+    2100032: M_08___Default_005
+    2100034: strap1
+    2100036: c10
+    2100038: cr5
+    2100040: c11
+    2100042: cr4
+    2100044: ret
+    2100046: s2
+    2100048: mat_dragon
+    2100050: b
+    2100052: cr1
+    2100054: cr3
+    2100056: cr7
+    2100058: cr6
+    2100060: crg
+    2100062: SketchUV_Texture
+    2100064: Material__123
+    2100066: cr8
+    2100068: FrontColor
+    2100070: arm1
+    2100072: M_08___Default
+    2100074: hlmt2
+    2100076: h1
+    2100078: hl
+    2100080: hl2
+    2100082: h2
+    2100084: face
+    2100086: hlmt
+    2100088: metal1
+    2100090: tank2
+    2100092: tb2
+    2100094: sh1
+    2100096: sh2
+    2100098: mg1
+    2100100: v2
+    2100102: k1
+    2100104: k2
+    2100106: scrf
+    2100108: frv
+    2100110: mtl_weapon_concussion_grenade_iw6
+    2100112: M_08___Default_002
+    2100114: M_08___Default_003
+    2300000: Mesh1
+    2300002: Mesh10
+    2300004: Mesh100
+    2300006: Mesh101
+    2300008: Mesh102
+    2300010: Mesh103
+    2300012: Mesh104
+    2300014: Mesh105
+    2300016: Mesh106
+    2300018: Mesh107
+    2300020: Mesh108
+    2300022: Mesh109
+    2300024: Mesh11
+    2300026: Mesh110
+    2300028: Mesh111
+    2300030: Mesh112
+    2300032: Mesh113
+    2300034: Mesh114
+    2300036: Mesh115
+    2300038: Mesh116
+    2300040: Mesh117
+    2300042: Mesh118
+    2300044: Mesh119
+    2300046: Mesh12
+    2300048: Mesh120
+    2300050: Mesh121
+    2300052: Mesh122
+    2300054: Mesh123
+    2300056: Mesh124
+    2300058: Mesh13
+    2300060: Mesh14
+    2300062: Mesh15
+    2300064: Mesh16
+    2300066: Mesh17
+    2300068: Mesh18
+    2300070: Mesh19
+    2300072: Mesh2
+    2300074: Mesh20
+    2300076: Mesh21
+    2300078: Mesh22
+    2300080: Mesh23
+    2300082: Mesh24
+    2300084: Mesh25
+    2300086: Mesh26
+    2300088: Mesh27
+    2300090: Mesh28
+    2300092: Mesh29
+    2300094: Mesh3
+    2300096: Mesh30
+    2300098: Mesh31
+    2300100: Mesh32
+    2300102: Mesh33
+    2300104: Mesh34
+    2300106: Mesh35
+    2300108: Mesh36
+    2300110: Mesh37
+    2300112: Mesh38
+    2300114: Mesh39
+    2300116: Mesh4
+    2300118: Mesh40
+    2300120: Mesh41
+    2300122: Mesh42
+    2300124: Mesh43
+    2300126: Mesh44
+    2300128: Mesh45
+    2300130: Mesh46
+    2300132: Mesh47
+    2300134: Mesh48
+    2300136: Mesh49
+    2300138: Mesh5
+    2300140: Mesh50
+    2300142: Mesh51
+    2300144: Mesh52
+    2300146: Mesh53
+    2300148: Mesh54
+    2300150: Mesh55
+    2300152: Mesh56
+    2300154: Mesh57
+    2300156: Mesh58
+    2300158: Mesh59
+    2300160: Mesh6
+    2300162: Mesh60
+    2300164: Mesh61
+    2300166: Mesh62
+    2300168: Mesh63
+    2300170: Mesh64
+    2300172: Mesh65
+    2300174: Mesh66
+    2300176: Mesh67
+    2300178: Mesh68
+    2300180: Mesh69
+    2300182: Mesh7
+    2300184: Mesh70
+    2300186: Mesh71
+    2300188: Mesh72
+    2300190: Mesh73
+    2300192: Mesh74
+    2300194: Mesh75
+    2300196: Mesh76
+    2300198: Mesh77
+    2300200: Mesh78
+    2300202: Mesh79
+    2300204: Mesh8
+    2300206: Mesh80
+    2300208: Mesh81
+    2300210: Mesh82
+    2300212: Mesh83
+    2300214: Mesh84
+    2300216: Mesh85
+    2300218: Mesh86
+    2300220: Mesh87
+    2300222: Mesh88
+    2300224: Mesh89
+    2300226: Mesh9
+    2300228: Mesh90
+    2300230: Mesh91
+    2300232: Mesh92
+    2300234: Mesh93
+    2300236: Mesh94
+    2300238: Mesh95
+    2300240: Mesh96
+    2300242: Mesh97
+    2300244: Mesh98
+    2300246: Mesh99
+    3300000: Mesh1
+    3300002: Mesh10
+    3300004: Mesh100
+    3300006: Mesh101
+    3300008: Mesh102
+    3300010: Mesh103
+    3300012: Mesh104
+    3300014: Mesh105
+    3300016: Mesh106
+    3300018: Mesh107
+    3300020: Mesh108
+    3300022: Mesh109
+    3300024: Mesh11
+    3300026: Mesh110
+    3300028: Mesh111
+    3300030: Mesh112
+    3300032: Mesh113
+    3300034: Mesh114
+    3300036: Mesh115
+    3300038: Mesh116
+    3300040: Mesh117
+    3300042: Mesh118
+    3300044: Mesh119
+    3300046: Mesh12
+    3300048: Mesh120
+    3300050: Mesh121
+    3300052: Mesh122
+    3300054: Mesh123
+    3300056: Mesh124
+    3300058: Mesh13
+    3300060: Mesh14
+    3300062: Mesh15
+    3300064: Mesh16
+    3300066: Mesh17
+    3300068: Mesh18
+    3300070: Mesh19
+    3300072: Mesh2
+    3300074: Mesh20
+    3300076: Mesh21
+    3300078: Mesh22
+    3300080: Mesh23
+    3300082: Mesh24
+    3300084: Mesh25
+    3300086: Mesh26
+    3300088: Mesh27
+    3300090: Mesh28
+    3300092: Mesh29
+    3300094: Mesh3
+    3300096: Mesh30
+    3300098: Mesh31
+    3300100: Mesh32
+    3300102: Mesh33
+    3300104: Mesh34
+    3300106: Mesh35
+    3300108: Mesh36
+    3300110: Mesh37
+    3300112: Mesh38
+    3300114: Mesh39
+    3300116: Mesh4
+    3300118: Mesh40
+    3300120: Mesh41
+    3300122: Mesh42
+    3300124: Mesh43
+    3300126: Mesh44
+    3300128: Mesh45
+    3300130: Mesh46
+    3300132: Mesh47
+    3300134: Mesh48
+    3300136: Mesh49
+    3300138: Mesh5
+    3300140: Mesh50
+    3300142: Mesh51
+    3300144: Mesh52
+    3300146: Mesh53
+    3300148: Mesh54
+    3300150: Mesh55
+    3300152: Mesh56
+    3300154: Mesh57
+    3300156: Mesh58
+    3300158: Mesh59
+    3300160: Mesh6
+    3300162: Mesh60
+    3300164: Mesh61
+    3300166: Mesh62
+    3300168: Mesh63
+    3300170: Mesh64
+    3300172: Mesh65
+    3300174: Mesh66
+    3300176: Mesh67
+    3300178: Mesh68
+    3300180: Mesh69
+    3300182: Mesh7
+    3300184: Mesh70
+    3300186: Mesh71
+    3300188: Mesh72
+    3300190: Mesh73
+    3300192: Mesh74
+    3300194: Mesh75
+    3300196: Mesh76
+    3300198: Mesh77
+    3300200: Mesh78
+    3300202: Mesh79
+    3300204: Mesh8
+    3300206: Mesh80
+    3300208: Mesh81
+    3300210: Mesh82
+    3300212: Mesh83
+    3300214: Mesh84
+    3300216: Mesh85
+    3300218: Mesh86
+    3300220: Mesh87
+    3300222: Mesh88
+    3300224: Mesh89
+    3300226: Mesh9
+    3300228: Mesh90
+    3300230: Mesh91
+    3300232: Mesh92
+    3300234: Mesh93
+    3300236: Mesh94
+    3300238: Mesh95
+    3300240: Mesh96
+    3300242: Mesh97
+    3300244: Mesh98
+    3300246: Mesh99
+    4300000: Mesh1
+    4300002: Mesh2
+    4300004: Mesh3
+    4300006: Mesh4
+    4300008: Mesh5
+    4300010: Mesh6
+    4300012: Mesh7
+    4300014: Mesh8
+    4300016: Mesh9
+    4300018: Mesh10
+    4300020: Mesh11
+    4300022: Mesh12
+    4300024: Mesh13
+    4300026: Mesh14
+    4300028: Mesh15
+    4300030: Mesh16
+    4300032: Mesh17
+    4300034: Mesh18
+    4300036: Mesh19
+    4300038: Mesh20
+    4300040: Mesh21
+    4300042: Mesh22
+    4300044: Mesh23
+    4300046: Mesh24
+    4300048: Mesh25
+    4300050: Mesh26
+    4300052: Mesh27
+    4300054: Mesh28
+    4300056: Mesh29
+    4300058: Mesh30
+    4300060: Mesh31
+    4300062: Mesh32
+    4300064: Mesh33
+    4300066: Mesh34
+    4300068: Mesh35
+    4300070: Mesh36
+    4300072: Mesh37
+    4300074: Mesh38
+    4300076: Mesh39
+    4300078: Mesh40
+    4300080: Mesh41
+    4300082: Mesh42
+    4300084: Mesh43
+    4300086: Mesh44
+    4300088: Mesh45
+    4300090: Mesh46
+    4300092: Mesh47
+    4300094: Mesh48
+    4300096: Mesh49
+    4300098: Mesh50
+    4300100: Mesh51
+    4300102: Mesh52
+    4300104: Mesh53
+    4300106: Mesh54
+    4300108: Mesh55
+    4300110: Mesh56
+    4300112: Mesh57
+    4300114: Mesh58
+    4300116: Mesh59
+    4300118: Mesh60
+    4300120: Mesh61
+    4300122: Mesh62
+    4300124: Mesh63
+    4300126: Mesh64
+    4300128: Mesh65
+    4300130: Mesh66
+    4300132: Mesh67
+    4300134: Mesh68
+    4300136: Mesh69
+    4300138: Mesh70
+    4300140: Mesh71
+    4300142: Mesh72
+    4300144: Mesh73
+    4300146: Mesh74
+    4300148: Mesh75
+    4300150: Mesh76
+    4300152: Mesh77
+    4300154: Mesh78
+    4300156: Mesh79
+    4300158: Mesh80
+    4300160: Mesh81
+    4300162: Mesh82
+    4300164: Mesh83
+    4300166: Mesh84
+    4300168: Mesh85
+    4300170: Mesh86
+    4300172: Mesh87
+    4300174: Mesh88
+    4300176: Mesh89
+    4300178: Mesh90
+    4300180: Mesh91
+    4300182: Mesh92
+    4300184: Mesh93
+    4300186: Mesh94
+    4300188: Mesh95
+    4300190: Mesh96
+    4300192: Mesh97
+    4300194: Mesh98
+    4300196: Mesh99
+    4300198: Mesh100
+    4300200: Mesh101
+    4300202: Mesh102
+    4300204: Mesh103
+    4300206: Mesh104
+    4300208: Mesh105
+    4300210: Mesh106
+    4300212: Mesh107
+    4300214: Mesh108
+    4300216: Mesh109
+    4300218: Mesh110
+    4300220: Mesh111
+    4300222: Mesh112
+    4300224: Mesh113
+    4300226: Mesh114
+    4300228: Mesh115
+    4300230: Mesh116
+    4300232: Mesh117
+    4300234: Mesh118
+    4300236: Mesh119
+    4300238: Mesh120
+    4300240: Mesh121
+    4300242: Mesh122
+    4300244: Mesh123
+    4300246: Mesh124
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
+      does not match:\n\tTransform 'Bip001 Pelvis' for human bone 'Hips' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Bip001 Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Finger0
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Finger01
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Finger02
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Finger01
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Finger02
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Finger1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Finger11
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Finger12
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Finger2
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Finger21
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 L Finger22
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Finger1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Finger11
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Finger12
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Finger2
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Finger21
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip001 R Finger22
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Soldier(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001
+      parentName: 
+      position: {x: 0, y: 1.0665514, z: -0.0000000024772304}
+      rotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Bip001 Pelvis
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.5, y: 0.5, z: 0.4999993, w: 0.5000007}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Bip001 L Thigh
+      parentName: 
+      position: {x: 0.00000018310547, y: 0.00000021173398, z: 0.1190608}
+      rotation: {x: 0.050289962, y: 0.9953462, z: 0.0031238475, w: 0.08214102}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Bip001 L Calf
+      parentName: 
+      position: {x: -0.46066976, y: 0, z: 0}
+      rotation: {x: -9.245162e-10, y: -0.000000007451429, z: 0.00091349, w: 0.9999996}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Bip001 L Foot
+      parentName: 
+      position: {x: -0.41573063, y: 0.000000011444092, z: 0}
+      rotation: {x: -0.071517706, y: 0.085750155, z: -0.044889357, w: 0.99273217}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bip001 L Toe0
+      parentName: 
+      position: {x: -0.17057803, y: 0.13410291, z: 0}
+      rotation: {x: 0.000000015454313, y: -0.000000015454313, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 R Thigh
+      parentName: 
+      position: {x: -0.00000018310547, y: -0.00000011849308, z: -0.1190608}
+      rotation: {x: 0.050290067, y: 0.99534607, z: -0.0031253032, w: -0.082142405}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Bip001 R Calf
+      parentName: 
+      position: {x: -0.4606698, y: 0, z: 0}
+      rotation: {x: -9.245162e-10, y: -0.000000007451428, z: 0.00091349, w: 0.9999996}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bip001 R Foot
+      parentName: 
+      position: {x: -0.41573063, y: 0, z: 0.000000045776368}
+      rotation: {x: 0.07151769, y: -0.08575024, z: -0.044889353, w: 0.99273217}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Bip001 R Toe0
+      parentName: 
+      position: {x: -0.17057803, y: 0.13410293, z: 0}
+      rotation: {x: -0.000000015454313, y: 0.000000015454313, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 Spine
+      parentName: 
+      position: {x: -0.21084604, y: 0.04606275, z: 0.00000016537373}
+      rotation: {x: -0.000002080476, y: 0.000000693676, z: -0.000398159, w: 0.99999994}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Bip001 Spine1
+      parentName: 
+      position: {x: -0.14336865, y: -0.00012486649, z: -3.4522965e-10}
+      rotation: {x: 0.0000000011405522, y: -0.00000026116822, z: 0.06295586, w: 0.99801636}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 Spine2
+      parentName: 
+      position: {x: -0.15808621, y: -0.00014403534, z: -3.9569567e-10}
+      rotation: {x: -0.000000010542968, y: 0.00000018070901, z: -0.04361938, w: 0.99904823}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 L Clavicle
+      parentName: 
+      position: {x: -0.112414494, y: -0.01559297, z: 0.057898875}
+      rotation: {x: -0.6591398, y: -0.06514998, z: 0.74702466, w: 0.056960307}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bip001 L UpperArm
+      parentName: 
+      position: {x: -0.15693231, y: 0, z: 0.00000018310547}
+      rotation: {x: 0.21820131, y: 0.060204472, z: 0.07127206, w: 0.97143394}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Bip001 L Forearm
+      parentName: 
+      position: {x: -0.32586676, y: 0.000000091552735, z: 0.000000091552735}
+      rotation: {x: -0.0034793885, y: 0.01581181, z: 0.028139178, w: 0.99947286}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: Bip001 L Hand
+      parentName: 
+      position: {x: -0.2778478, y: -0.000000011444092, z: 0}
+      rotation: {x: -0.8146315, y: -0.042759623, z: -0.17961934, w: 0.5498038}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Bip001 L Finger0
+      parentName: 
+      position: {x: -0.034966737, y: 0.022511445, z: -0.023661738}
+      rotation: {x: 0.52585983, y: -0.30962422, z: 0.19415745, w: 0.7680541}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Bip001 L Finger01
+      parentName: 
+      position: {x: -0.045567125, y: 0, z: 0.000000091552735}
+      rotation: {x: -0.000000084983135, y: 0.0000012814991, z: -0.03776978, w: 0.9992865}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: Bip001 L Finger02
+      parentName: 
+      position: {x: -0.04556717, y: 0.000000045776368, z: -0.000000091552735}
+      rotation: {x: 0.000000022199798, y: -0.000000002601792, z: -0.11640221, w: 0.9932022}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bip001 L Finger1
+      parentName: 
+      position: {x: -0.11595456, y: 0.00025309753, z: -0.042826787}
+      rotation: {x: -0.025903558, y: -0.010967599, z: 0.008107971, w: 0.99957144}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bip001 L Finger11
+      parentName: 
+      position: {x: -0.048404206, y: -0.000000091552735, z: -0.000000022888184}
+      rotation: {x: -0.00000019371498, y: -0.0000007897611, z: -0.037768446, w: 0.99928653}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: Bip001 L Finger12
+      parentName: 
+      position: {x: -0.048404388, y: 0.000000022888184, z: 0}
+      rotation: {x: 0.0000000036999666, y: -4.3363196e-10, z: -0.1164022, w: 0.9932022}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 L Finger2
+      parentName: 
+      position: {x: -0.11752945, y: -0.013413345, z: 0.012339918}
+      rotation: {x: 0.01715808, y: 0.04944867, z: -0.024004534, w: 0.9983407}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Bip001 L Finger21
+      parentName: 
+      position: {x: -0.040337037, y: 0, z: 0}
+      rotation: {x: -0.00000008195636, y: 0.0000002384185, z: -0.03776999, w: 0.9992865}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Bip001 L Finger22
+      parentName: 
+      position: {x: -0.040336855, y: -0.000000022888184, z: 0}
+      rotation: {x: -2.1681604e-10, y: -0.0000000018499832, z: -0.11640222, w: 0.99320215}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 Neck
+      parentName: 
+      position: {x: -0.21146594, y: -0.044043336, z: -0.000000062668896}
+      rotation: {x: 4.9013056e-13, y: 0.0000005421658, z: -0.13052621, w: 0.9914449}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bip001 Head
+      parentName: 
+      position: {x: -0.100586794, y: 0.000000045776368, z: -1.7462298e-13}
+      rotation: {x: 0.000000009035827, y: -0.0000002837814, z: 0.06907353, w: 0.9976116}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: Bip001 R Clavicle
+      parentName: 
+      position: {x: -0.112414494, y: -0.01559265, z: -0.057898957}
+      rotation: {x: 0.65913993, y: 0.06514793, z: 0.7470248, w: 0.05695846}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bip001 R UpperArm
+      parentName: 
+      position: {x: -0.15693231, y: 0.000000011444092, z: 0}
+      rotation: {x: -0.21820126, y: -0.06020304, z: 0.071272224, w: 0.97143406}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Bip001 R Forearm
+      parentName: 
+      position: {x: -0.32586676, y: 0.000000045776368, z: 0}
+      rotation: {x: 0.0034793909, y: -0.015811684, z: 0.028139494, w: 0.9994729}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Bip001 R Hand
+      parentName: 
+      position: {x: -0.2778478, y: 0, z: 0}
+      rotation: {x: 0.8146316, y: 0.04275867, z: -0.17961845, w: 0.5498038}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Bip001 R Finger0
+      parentName: 
+      position: {x: -0.034966644, y: 0.022511445, z: 0.023661736}
+      rotation: {x: -0.52585983, y: 0.30962452, z: 0.19415675, w: 0.7680543}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1.0000001}
+    - name: Bip001 R Finger01
+      parentName: 
+      position: {x: -0.04556717, y: 0, z: 0}
+      rotation: {x: 0.00000014901161, y: 0.00000008940697, z: -0.0377699, w: 0.9992865}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: Bip001 R Finger02
+      parentName: 
+      position: {x: -0.04556717, y: 0.000000045776368, z: 0}
+      rotation: {x: -0.000000013065339, y: 0.000000016534397, z: -0.11640222, w: 0.9932022}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Bip001 R Finger1
+      parentName: 
+      position: {x: -0.115954466, y: 0.0002531891, z: 0.04282679}
+      rotation: {x: 0.025903514, y: 0.010967605, z: 0.008109022, w: 0.99957144}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: Bip001 R Finger11
+      parentName: 
+      position: {x: -0.0484043, y: 0.000000045776368, z: 0}
+      rotation: {x: -0.00000018067651, y: 0.000000007450578, z: -0.03777089, w: 0.9992865}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Bip001 R Finger12
+      parentName: 
+      position: {x: -0.04840448, y: -0.000000022888184, z: 0}
+      rotation: {x: -8.672641e-10, y: -0.0000000073999322, z: -0.11640222, w: 0.9932022}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bip001 R Finger2
+      parentName: 
+      position: {x: -0.11752936, y: -0.0134133, z: -0.012339912}
+      rotation: {x: -0.017157977, y: -0.049448654, z: -0.024001414, w: 0.99834085}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Bip001 R Finger21
+      parentName: 
+      position: {x: -0.040336944, y: 0.000000045776368, z: 0.000000005722046}
+      rotation: {x: -0.000000024214383, y: -0.00000016391276, z: -0.037773408, w: 0.99928635}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bip001 R Finger22
+      parentName: 
+      position: {x: -0.040336944, y: -0.000000045776368, z: 0}
+      rotation: {x: -0.0000000014163511, y: 0.0000000039167825, z: -0.11640222, w: 0.99320215}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Weapon_R
+      parentName: 
+      position: {x: -0.16406882, y: 0.04387102, z: 0.0077612917}
+      rotation: {x: -0.051745083, y: -0.030480081, z: -0.72451234, w: 0.68664056}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+    - name: SK_Soldier_Head
+      parentName: 
+      position: {x: 0, y: 1.8560473, z: 0.027031723}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SK_Soldier_Legs
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SK_Soldier_Torso
+      parentName: 
+      position: {x: 0, y: 1.8224729, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Bip001
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: cfeff1d67ecb92245941b957cebd290e,
+    type: 3}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

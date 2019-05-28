@@ -44,8 +44,12 @@ public class UnitOfEnemy : Unit
         }
         map.path = temp;
         yield return StartCoroutine(Move());
+    }
 
-
+    protected override void Die()
+    {
+        base.Die();
+        EnemyAI.enemyUnits.Remove(this);
     }
 
     public bool IsTargetInRangeAtNode(Node node, int range)

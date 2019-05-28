@@ -35,6 +35,8 @@ public class UIManager : MonoBehaviour {
 
     public static SkillPanel skillPanel;
 
+    public static Button endTurnBtn;
+
     private Vector3 mouseHitPoint;
     private LayerMask mouseHitMask;
 
@@ -90,12 +92,17 @@ public class UIManager : MonoBehaviour {
 
         skillPanel = GameObject.FindGameObjectWithTag("SkillPanel").GetComponent<SkillPanel>();
 
-        //UIMgr.OpenPanel<UI_endTurnButtonPanel>(prefabName: "Resources/UI/UI_endTurnButtonPanel");
-        /*----初始化UI----*/
 
         //playerState = GameObject.Find("Player").GetComponent<PlayerState>();
+        
+    }
 
+    private void Start()
+    {
 
+        endTurnBtn = GameObject.FindGameObjectWithTag("EndTurnBtn").GetComponent<Button>();
+        endTurnBtn.onClick.AddListener(StageManager.stageManager.PlayerEnd);
+        /*----初始化回合结束按钮----*/
     }
 
     public void Update()

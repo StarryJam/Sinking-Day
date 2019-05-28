@@ -6,6 +6,7 @@ using QFramework.EventID;
 
 public class StageManager : MonoBehaviour {
 
+    public static int numOfTurn = 0;//回合数
     public static StageManager stageManager;
     public static TurnStage turnStage;
 
@@ -36,10 +37,12 @@ public class StageManager : MonoBehaviour {
 
     private void StartTurn()//回合开始
     {
+        numOfTurn++;
+
         //结算Dot伤害
 
         //冷却技能
-        QEventSystem.SendEvent(GameEventID.Turn.endTurn);
+        QEventSystem.SendEvent(GameEventID.TurnManager.turnStart);
         UIManager.UpdateSelectInformation();
 
         turnStage = TurnStage.playMoveing;
@@ -54,13 +57,9 @@ public class StageManager : MonoBehaviour {
     public void PlayerEnd()
     {
         turnStage = TurnStage.AIMoving;
+        UnitSpawner.spawner.SpawnUnits();
         StartCoroutine(AIMoveing());
     }
-
-    //public void EndTurn(int key, params object[] param)//回合结束
-    //{
-    //    Debug.Log("回合结束");
-    //}
 
     private IEnumerator AIMoveing()//AI行动
     {

@@ -8,7 +8,8 @@ public class MonoBasedOnTurn : MonoBehaviour {
 
 	// Use this for initialization
 	public void Awake () {
-        QEventSystem.RegisterEvent(GameEventID.Turn.endTurn, TurnStartTrigger);
+        QEventSystem.RegisterEvent(GameEventID.TurnManager.turnStart, TurnStartTrigger);
+        QEventSystem.RegisterEvent(GameEventID.TurnManager.playerEnd, PlayerEndTrigger);
     }
 	
 	private void TurnStartTrigger(int key, params object[] param)
@@ -16,7 +17,16 @@ public class MonoBasedOnTurn : MonoBehaviour {
         AtTurnStart();
     }
 
+    private void PlayerEndTrigger(int key, params object[] param)
+    {
+        AtPlayerEnd();
+    }
+
     public virtual void AtTurnStart()
+    {
+    }
+
+    public virtual void AtPlayerEnd()
     {
     }
 }

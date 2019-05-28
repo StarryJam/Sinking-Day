@@ -5,7 +5,9 @@ using UnityEngine.UI;
 using QFramework;
 using QFramework.EventID;
 
-public class Guider : MonoBehaviour {
+public class Guider : MonoBasedOnTurn {
+
+    public static GameObject onGuideObj;
 
     [System.Serializable]
     public class GuideStep
@@ -14,6 +16,7 @@ public class Guider : MonoBehaviour {
         public GameObject obj;
         public float delay;
     }
+
 
     private bool nextStepTrigger = false;
     public List<GuideStep> steps;
@@ -80,7 +83,7 @@ public class Guider : MonoBehaviour {
             else
                 PointAtGameObj(obj);
         }
-
+        onGuideObj = obj;
     }
     
 
@@ -92,9 +95,9 @@ public class Guider : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
         UIManager.HidePopInfo();
+        onGuideObj = null;
     }
-
-
+    
     IEnumerator CameraControl()
     {
         UIManager.SetPopInfo("使用<color=red>WASD</color>和<color=red>滚轮</color>来控制镜头");
@@ -106,7 +109,7 @@ public class Guider : MonoBehaviour {
         StartCoroutine(Guide());
     }
 
-    IEnumerator Guide()//第一步：点击单位
+    IEnumerator Guide()
     {
         foreach(var step in steps)
         {
@@ -116,9 +119,7 @@ public class Guider : MonoBehaviour {
             nextStepTrigger = false;
         }
     }
-
-
-
+    
     private void AddSignal(GameObject obj)
     {
         obj.AddComponent<GuiderSignal>();

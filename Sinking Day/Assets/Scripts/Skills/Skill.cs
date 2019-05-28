@@ -23,8 +23,7 @@ public class Skill : MonoBasedOnTurn {
     public int influenceRange = 5;
     public bool isToEnemy;
     public bool hasProjectile;
-    public Projectile Projectile;
-    public float ProjectileSpeed;
+    public RFX1_Target Projectile;
 
     public GameObject target;
     private Unit speller;
@@ -37,16 +36,10 @@ public class Skill : MonoBasedOnTurn {
         ReadyToSpell
     }
 
-	// Use this for initialization
 	void Start () {
         speller = transform.parent.GetComponent<Unit>();
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     public void StartSpelling()
     {
         speller.GetComponent<UnitOfPlyer>().ReadyToSpell(this);
@@ -63,17 +56,28 @@ public class Skill : MonoBasedOnTurn {
         {
             if (hasProjectile && Projectile != null)
             {
-                Projectile currentProjectile;
+                RFX1_Target currentProjectile;
                 if (speller.projectilePos != null)
                     currentProjectile = Instantiate(Projectile, speller.projectilePos);
                 else
-                    currentProjectile = Instantiate(Projectile, transform);
+                {
+                    currentProjectile = Instantiate(Projectile, transform.position, Quaternion.identity);
+                }
                 if (isToEnemy)
-                    currentProjectile.SetProjectile(target.gameObject, ProjectileSpeed, damage);
+                {
+                    currentProjectile.transform.LookAt(target.hitPos);
+                    currentProjectile.Target = target.hitPos.gameObject;
+                }
+                currentProjectile.SetProjectile(target.gameObject, damage);
             }
             restCooldown = coolDown;
             UIManager.UpdateSelectInformation();
         }
+    }
+
+    public void Spell(Vector3 pos)//对地面释放
+    {
+
     }
 
     public void StopSpelling()

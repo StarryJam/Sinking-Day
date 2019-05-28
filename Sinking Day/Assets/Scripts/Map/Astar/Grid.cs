@@ -140,6 +140,13 @@ public class Grid : MonoBehaviour {
 
             foreach (var node in GetNeiborNodes(currentNode, true))
             {
+                if (node.state == Node.NodeState.unwalkable && node == endNode)
+                {
+                    endNode = currentNode;
+                    openSet.Add(currentNode);
+                    break;
+                }
+
                 if (node.state==Node.NodeState.unwalkable || closeSet.Contains(node)) continue;
                 int newCost = currentNode.gCost + GetNodedsDistance(currentNode, node);
                 if (newCost < node.gCost || !openSet.Contains(node))
@@ -154,6 +161,7 @@ public class Grid : MonoBehaviour {
                 }
             }
         }
+        Debug.Log(closeSet.Count);
     }
 
     public void DisplayPath()

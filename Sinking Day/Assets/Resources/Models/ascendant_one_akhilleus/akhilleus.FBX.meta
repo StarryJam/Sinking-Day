@@ -1,0 +1,578 @@
+fileFormatVersion: 2
+guid: a3662b436a2831e42aee524c9453d46f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: arm left elbow
+    100004: arm left elbow adj. 1
+    100006: arm left finger 1a
+    100008: arm left finger 1b
+    100010: arm left finger 1c
+    100012: arm left finger 2a
+    100014: arm left finger 2b
+    100016: arm left finger 2c
+    100018: arm left finger 3a
+    100020: arm left finger 3b
+    100022: arm left finger 3c
+    100024: arm left finger 4a
+    100026: arm left finger 4b
+    100028: arm left finger 4c
+    100030: arm left finger 5a
+    100032: arm left finger 5b
+    100034: arm left finger 5c
+    100036: arm left shoulder 1
+    100038: arm left shoulder 2
+    100040: arm left shoulder 2 adj. 1
+    100042: arm left wrist
+    100044: arm right elbow
+    100046: arm right elbow adj. 1
+    100048: arm right finger 1a
+    100050: arm right finger 1b
+    100052: arm right finger 1c
+    100054: arm right finger 2a
+    100056: arm right finger 2b
+    100058: arm right finger 2c
+    100060: arm right finger 3a
+    100062: arm right finger 3b
+    100064: arm right finger 3c
+    100066: arm right finger 4a
+    100068: arm right finger 4b
+    100070: arm right finger 4c
+    100072: arm right finger 5a
+    100074: arm right finger 5b
+    100076: arm right finger 5c
+    100078: arm right shoulder 1
+    100080: arm right shoulder 2
+    100082: arm right shoulder 2 adj. 1
+    100084: arm right wrist
+    100086: hair 1 1
+    100088: hair 1 2
+    100090: hair 1 3
+    100092: hair 1 4
+    100094: hair 1 5
+    100096: hair 1 6
+    100098: hair 2 1
+    100100: hair 2 2
+    100102: hair 2 3
+    100104: hair 2 4
+    100106: hair 2 5
+    100108: hair 2 6
+    100110: hair 3 1
+    100112: hair 3 2
+    100114: hair 3 3
+    100116: hair 3 4
+    100118: hair 3 5
+    100120: hair 3 6
+    100122: head cheek left 1
+    100124: head cheek left 2
+    100126: head cheek left 3
+    100128: head cheek left 4
+    100130: head cheek left 5
+    100132: head cheek left 6
+    100134: head cheek right 1
+    100136: head cheek right 2
+    100138: head cheek right 3
+    100140: head cheek right 4
+    100142: head cheek right 5
+    100144: head cheek right 6
+    100146: head cheekbone left 1
+    100148: head cheekbone left 2
+    100150: head cheekbone left 3
+    100152: head cheekbone right 1
+    100154: head cheekbone right 2
+    100156: head cheekbone right 3
+    100158: head chin 1
+    100160: head chin 2
+    100162: head eyeball left
+    100164: head eyeball right
+    100166: head eyebrow
+    100168: head eyebrow left 1
+    100170: head eyebrow left 2
+    100172: head eyebrow left 3
+    100174: head eyebrow left 4
+    100176: head eyebrow right 1
+    100178: head eyebrow right 2
+    100180: head eyebrow right 3
+    100182: head eyelid left corner
+    100184: head eyelid left lower
+    100186: head eyelid left lower adj. 1
+    100188: head eyelid left lower adj. 2
+    100190: head eyelid left upper
+    100192: head eyelid left upper adj. 1
+    100194: head eyelid left upper adj. 2
+    100196: head eyelid right lower
+    100198: head eyelid right lower adj. 1
+    100200: head eyelid right lower adj. 2
+    100202: head eyelid right upper
+    100204: head facial root
+    100206: head jaw
+    100208: head jaw adj. 1
+    100210: head jaw left 1
+    100212: head jaw left 2
+    100214: head jaw left 3
+    100216: head jaw right 1
+    100218: head jaw right 2
+    100220: head jaw right 3
+    100222: head jawup left 1
+    100224: head jawup left 2
+    100226: head jawup right 1
+    100228: head jawup right 2
+    100230: head lip lower left 1
+    100232: head lip lower left 2
+    100234: head lip lower left 3
+    100236: head lip lower middle
+    100238: head lip lower right 1
+    100240: head lip lower right 2
+    100242: head lip lower right 3
+    100244: head lip upper left 1
+    100246: head lip upper left 2
+    100248: head lip upper middle
+    100250: head lip upper right 1
+    100252: head lip upper right 2
+    100254: head mouth corner left
+    100256: head mouth corner left lower
+    100258: head mouth corner left upper
+    100260: head mouth corner right
+    100262: head mouth corner right lower
+    100264: head mouth corner right upper
+    100266: head neck lower
+    100268: head neck middle
+    100270: head neck upper
+    100272: head nose
+    100274: head nose left 1
+    100276: head nose lower
+    100278: head nostril left 1
+    100280: head nostril left 2
+    100282: head nostril left 3
+    100284: head nostril right 1
+    100286: head nostril right 2
+    100288: head nostril right 3
+    100290: head temple left
+    100292: head temple right
+    100294: helmet front left lower
+    100296: helmet front left upper
+    100298: helmet front lower
+    100300: helmet front right lower
+    100302: helmet front right upper
+    100304: helmet front upper
+    100306: helmet root
+    100308: helmet tile 1 1
+    100310: helmet tile 1 10
+    100312: helmet tile 1 2
+    100314: helmet tile 1 3
+    100316: helmet tile 1 4
+    100318: helmet tile 1 5
+    100320: helmet tile 1 6
+    100322: helmet tile 1 7
+    100324: helmet tile 1 8
+    100326: helmet tile 1 9
+    100328: helmet tile 2 1
+    100330: helmet tile 2 10
+    100332: helmet tile 2 2
+    100334: helmet tile 2 3
+    100336: helmet tile 2 4
+    100338: helmet tile 2 5
+    100340: helmet tile 2 6
+    100342: helmet tile 2 7
+    100344: helmet tile 2 8
+    100346: helmet tile 2 9
+    100348: helmet tile 3 1
+    100350: helmet tile 3 2
+    100352: helmet tile 3 3
+    100354: helmet tile 3 4
+    100356: helmet tile 3 5
+    100358: helmet tile 3 6
+    100360: helmet tile 3 7
+    100362: helmet tile 4 1
+    100364: helmet tile 4 10
+    100366: helmet tile 4 2
+    100368: helmet tile 4 3
+    100370: helmet tile 4 4
+    100372: helmet tile 4 5
+    100374: helmet tile 4 6
+    100376: helmet tile 4 7
+    100378: helmet tile 4 8
+    100380: helmet tile 4 9
+    100382: helmet tile 5 1
+    100384: helmet tile 5 2
+    100386: helmet tile 5 3
+    100388: helmet tile 5 4
+    100390: helmet tile 5 5
+    100392: helmet tile 5 6
+    100394: helmet tile 5 7
+    100396: helmet tile 6 1
+    100398: helmet tile 6 10
+    100400: helmet tile 6 2
+    100402: helmet tile 6 3
+    100404: helmet tile 6 4
+    100406: helmet tile 6 5
+    100408: helmet tile 6 6
+    100410: helmet tile 6 7
+    100412: helmet tile 6 8
+    100414: helmet tile 6 9
+    100416: helmet tile 7 1
+    100418: helmet tile 7 10
+    100420: helmet tile 7 2
+    100422: helmet tile 7 3
+    100424: helmet tile 7 4
+    100426: helmet tile 7 5
+    100428: helmet tile 7 6
+    100430: helmet tile 7 7
+    100432: helmet tile 7 8
+    100434: helmet tile 7 9
+    100436: helmet tile root
+    100438: leg left ankle
+    100440: leg left knee
+    100442: leg left thigh
+    100444: leg left toes
+    100446: leg right ankle
+    100448: leg right knee
+    100450: leg right thigh
+    100452: leg right toes
+    100454: Object001
+    100456: root ground
+    100458: root hips
+    100460: root pelvis
+    100462: spine lower
+    100464: spine middle
+    100466: spine upper
+    100468: weapon l 1
+    100470: weapon l 2
+    100472: weapon r 1
+    100474: weapon r 2
+    400000: //RootNode
+    400002: arm left elbow
+    400004: arm left elbow adj. 1
+    400006: arm left finger 1a
+    400008: arm left finger 1b
+    400010: arm left finger 1c
+    400012: arm left finger 2a
+    400014: arm left finger 2b
+    400016: arm left finger 2c
+    400018: arm left finger 3a
+    400020: arm left finger 3b
+    400022: arm left finger 3c
+    400024: arm left finger 4a
+    400026: arm left finger 4b
+    400028: arm left finger 4c
+    400030: arm left finger 5a
+    400032: arm left finger 5b
+    400034: arm left finger 5c
+    400036: arm left shoulder 1
+    400038: arm left shoulder 2
+    400040: arm left shoulder 2 adj. 1
+    400042: arm left wrist
+    400044: arm right elbow
+    400046: arm right elbow adj. 1
+    400048: arm right finger 1a
+    400050: arm right finger 1b
+    400052: arm right finger 1c
+    400054: arm right finger 2a
+    400056: arm right finger 2b
+    400058: arm right finger 2c
+    400060: arm right finger 3a
+    400062: arm right finger 3b
+    400064: arm right finger 3c
+    400066: arm right finger 4a
+    400068: arm right finger 4b
+    400070: arm right finger 4c
+    400072: arm right finger 5a
+    400074: arm right finger 5b
+    400076: arm right finger 5c
+    400078: arm right shoulder 1
+    400080: arm right shoulder 2
+    400082: arm right shoulder 2 adj. 1
+    400084: arm right wrist
+    400086: hair 1 1
+    400088: hair 1 2
+    400090: hair 1 3
+    400092: hair 1 4
+    400094: hair 1 5
+    400096: hair 1 6
+    400098: hair 2 1
+    400100: hair 2 2
+    400102: hair 2 3
+    400104: hair 2 4
+    400106: hair 2 5
+    400108: hair 2 6
+    400110: hair 3 1
+    400112: hair 3 2
+    400114: hair 3 3
+    400116: hair 3 4
+    400118: hair 3 5
+    400120: hair 3 6
+    400122: head cheek left 1
+    400124: head cheek left 2
+    400126: head cheek left 3
+    400128: head cheek left 4
+    400130: head cheek left 5
+    400132: head cheek left 6
+    400134: head cheek right 1
+    400136: head cheek right 2
+    400138: head cheek right 3
+    400140: head cheek right 4
+    400142: head cheek right 5
+    400144: head cheek right 6
+    400146: head cheekbone left 1
+    400148: head cheekbone left 2
+    400150: head cheekbone left 3
+    400152: head cheekbone right 1
+    400154: head cheekbone right 2
+    400156: head cheekbone right 3
+    400158: head chin 1
+    400160: head chin 2
+    400162: head eyeball left
+    400164: head eyeball right
+    400166: head eyebrow
+    400168: head eyebrow left 1
+    400170: head eyebrow left 2
+    400172: head eyebrow left 3
+    400174: head eyebrow left 4
+    400176: head eyebrow right 1
+    400178: head eyebrow right 2
+    400180: head eyebrow right 3
+    400182: head eyelid left corner
+    400184: head eyelid left lower
+    400186: head eyelid left lower adj. 1
+    400188: head eyelid left lower adj. 2
+    400190: head eyelid left upper
+    400192: head eyelid left upper adj. 1
+    400194: head eyelid left upper adj. 2
+    400196: head eyelid right lower
+    400198: head eyelid right lower adj. 1
+    400200: head eyelid right lower adj. 2
+    400202: head eyelid right upper
+    400204: head facial root
+    400206: head jaw
+    400208: head jaw adj. 1
+    400210: head jaw left 1
+    400212: head jaw left 2
+    400214: head jaw left 3
+    400216: head jaw right 1
+    400218: head jaw right 2
+    400220: head jaw right 3
+    400222: head jawup left 1
+    400224: head jawup left 2
+    400226: head jawup right 1
+    400228: head jawup right 2
+    400230: head lip lower left 1
+    400232: head lip lower left 2
+    400234: head lip lower left 3
+    400236: head lip lower middle
+    400238: head lip lower right 1
+    400240: head lip lower right 2
+    400242: head lip lower right 3
+    400244: head lip upper left 1
+    400246: head lip upper left 2
+    400248: head lip upper middle
+    400250: head lip upper right 1
+    400252: head lip upper right 2
+    400254: head mouth corner left
+    400256: head mouth corner left lower
+    400258: head mouth corner left upper
+    400260: head mouth corner right
+    400262: head mouth corner right lower
+    400264: head mouth corner right upper
+    400266: head neck lower
+    400268: head neck middle
+    400270: head neck upper
+    400272: head nose
+    400274: head nose left 1
+    400276: head nose lower
+    400278: head nostril left 1
+    400280: head nostril left 2
+    400282: head nostril left 3
+    400284: head nostril right 1
+    400286: head nostril right 2
+    400288: head nostril right 3
+    400290: head temple left
+    400292: head temple right
+    400294: helmet front left lower
+    400296: helmet front left upper
+    400298: helmet front lower
+    400300: helmet front right lower
+    400302: helmet front right upper
+    400304: helmet front upper
+    400306: helmet root
+    400308: helmet tile 1 1
+    400310: helmet tile 1 10
+    400312: helmet tile 1 2
+    400314: helmet tile 1 3
+    400316: helmet tile 1 4
+    400318: helmet tile 1 5
+    400320: helmet tile 1 6
+    400322: helmet tile 1 7
+    400324: helmet tile 1 8
+    400326: helmet tile 1 9
+    400328: helmet tile 2 1
+    400330: helmet tile 2 10
+    400332: helmet tile 2 2
+    400334: helmet tile 2 3
+    400336: helmet tile 2 4
+    400338: helmet tile 2 5
+    400340: helmet tile 2 6
+    400342: helmet tile 2 7
+    400344: helmet tile 2 8
+    400346: helmet tile 2 9
+    400348: helmet tile 3 1
+    400350: helmet tile 3 2
+    400352: helmet tile 3 3
+    400354: helmet tile 3 4
+    400356: helmet tile 3 5
+    400358: helmet tile 3 6
+    400360: helmet tile 3 7
+    400362: helmet tile 4 1
+    400364: helmet tile 4 10
+    400366: helmet tile 4 2
+    400368: helmet tile 4 3
+    400370: helmet tile 4 4
+    400372: helmet tile 4 5
+    400374: helmet tile 4 6
+    400376: helmet tile 4 7
+    400378: helmet tile 4 8
+    400380: helmet tile 4 9
+    400382: helmet tile 5 1
+    400384: helmet tile 5 2
+    400386: helmet tile 5 3
+    400388: helmet tile 5 4
+    400390: helmet tile 5 5
+    400392: helmet tile 5 6
+    400394: helmet tile 5 7
+    400396: helmet tile 6 1
+    400398: helmet tile 6 10
+    400400: helmet tile 6 2
+    400402: helmet tile 6 3
+    400404: helmet tile 6 4
+    400406: helmet tile 6 5
+    400408: helmet tile 6 6
+    400410: helmet tile 6 7
+    400412: helmet tile 6 8
+    400414: helmet tile 6 9
+    400416: helmet tile 7 1
+    400418: helmet tile 7 10
+    400420: helmet tile 7 2
+    400422: helmet tile 7 3
+    400424: helmet tile 7 4
+    400426: helmet tile 7 5
+    400428: helmet tile 7 6
+    400430: helmet tile 7 7
+    400432: helmet tile 7 8
+    400434: helmet tile 7 9
+    400436: helmet tile root
+    400438: leg left ankle
+    400440: leg left knee
+    400442: leg left thigh
+    400444: leg left toes
+    400446: leg right ankle
+    400448: leg right knee
+    400450: leg right thigh
+    400452: leg right toes
+    400454: Object001
+    400456: root ground
+    400458: root hips
+    400460: root pelvis
+    400462: spine lower
+    400464: spine middle
+    400466: spine upper
+    400468: weapon l 1
+    400470: weapon l 2
+    400472: weapon r 1
+    400474: weapon r 2
+    2100000: 'Material #122'
+    2100002: 'Material #72'
+    2100004: 'Material #185'
+    2100006: 'Material #134'
+    2100008: 'Material #47'
+    2100010: 'Material #147'
+    2100012: 'Material #97'
+    2100014: 'Material #198'
+    2100016: 'Material #26'
+    2100018: 'Material #59'
+    2100020: 'Material #28'
+    4300000: Object001
+    9500000: //RootNode
+    13700000: Object001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
