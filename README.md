@@ -1,4 +1,4 @@
-![LOGO](C:\Users\StarryJam\Desktop\LOGO.png)
+![LOGO](https://github.com/StarryJam/Sinking-Day/blob/master/README_Pics/LOGO.png)
 
 ## 项目简介
 
@@ -22,13 +22,13 @@
 
 在战斗中玩家可以通过击杀敌人提升等级，学习不同的技能。
 
-![game](D:\Work\Unity3D\Sinking-Day\README_Pics\game.gif)
+![game](https://github.com/StarryJam/Sinking-Day/blob/master/README_Pics/game.gif)
 
 
 
 ## 游戏菜单
 
-![menu](D:\Work\Unity3D\Sinking-Day\README_Pics\menu.gif)
+![menu](https://github.com/StarryJam/Sinking-Day/blob/master/README_Pics/menu.gif)
 
 
 
@@ -46,7 +46,7 @@
 
 游戏配备自动寻路算法，棋子会自动计算到目标点的最短路径，避开沿途的障碍物，无须玩家手动规划路径。
 
-![move](D:\Work\Unity3D\Sinking-Day\README_Pics\move.gif)
+![move](https://github.com/StarryJam/Sinking-Day/blob/master/README_Pics/move.gif)
 
 
 
@@ -54,7 +54,7 @@
 
 游戏设计了多种不同的技能供玩家使用，包括伤害型、辅助型、异常状态等技能类型。
 
-![Skillssss](D:\Work\Unity3D\Sinking-Day\README_Pics\Skillssss.gif)
+![Skillssss](https://github.com/StarryJam/Sinking-Day/blob/master/README_Pics/Skillssss.gif)
 
 
 
@@ -62,4 +62,4 @@
 
 游戏中的敌人由电脑AI控制，玩家回合结束后，AI敌人会自动攻击距离最近的敌人
 
-![AI](D:\Work\Unity3D\Sinking-Day\README_Pics\AI.gif)
+![AI](https://github.com/StarryJam/Sinking-Day/blob/master/README_Pics/AI.gif)
