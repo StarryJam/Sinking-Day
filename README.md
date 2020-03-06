@@ -4,6 +4,8 @@
 
 本项目为使用Unity3D独立开发的回合制策略战棋游戏，开发时长为6个月，项目在Unity3D的基础框架之下开发了回合制游戏的框架，以满足回合制游戏独特的结算方式；游戏具有完善的回合制战斗系统、AI敌人和寻路算法，以及新手教学关卡；部分美术、音乐资源来自互联网。
 
+![screenShoot](D:\Work\Unity3D\Sinking-Day\README_Pics\screenShoot.png)
+
 
 
 ## 游戏背景
